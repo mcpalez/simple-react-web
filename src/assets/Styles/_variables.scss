@@ -77,12 +77,6 @@ body {
 
 //scsss-docs-start helpers-view
 
-@include lt-md {
-    .only-on--mobile {
-        display: unset;
-    }
-}
-
 @include gt-md {
     .only-on--mobile {
         display: none;
@@ -92,11 +86,5 @@ body {
 @include lt-md {
     .only-on--desktop {
         display: none;
-    }
-}
-
-@include gt-md {
-    .only-on--desktop {
-        display: unset;
     }
 }

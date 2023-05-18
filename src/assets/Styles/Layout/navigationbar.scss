@@ -1,8 +1,18 @@
 @import '../mixins.scss';
 @import '../variables.scss';
 
-// scss-docs-start header-position
-// header settings for hiding on scroll down and show scroll down
+/* scss-docs-start */
+.app-header--hide {
+    //hiding navbar on scroll down style
+    transform: translateY(-100%);
+}
+.mobile-menu-open {
+    //mobile menu prevent scroll on open
+    height: 0;
+    overflow: hidden;
+}
+/* scss-docs-end */
+
 
 .app-header {
     background: var(--st-main);
@@ -12,37 +22,13 @@
     width: 100%;
     z-index: 999;
     transition: transform 600ms ease,background 600ms ease,-webkit-transform 600ms ease;
-}
-
-.app-header--hide {
-    transform: translateY(-100%);
-}
-
-// scss-docs-end header-position
-
-.navbar {
-    padding-top: 19px !important;
-    padding-bottom: 19px !important;
-    @include lt-md {
-        padding-top: 10px !important;
-        padding-bottom: 10px !important;
-    }
-}
-
-.logo-navbar {
-    z-index: 5;
-    svg {
-        width: 133px;
-        height: 45px;
-        @include lt-md {
-            width: 111px;
-            height: 37px;
-        }
-    }
-}
-
-.app-header {
     .navbar {
+        padding-top: 19px !important;
+        padding-bottom: 19px !important;
+        @include lt-md {
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+        }
         .navbar-container {
             @include lt-md {
                 padding-top: 1vh;
@@ -68,21 +54,43 @@
                         box-shadow: none !important;
                     }
                 }
+                .hidden-hamburger-menu {
+                    display: none;
+                }
+                .hidden-cross-menu {
+                    display: none;
+                }
+            }
+            .collapsing {
+                -webkit-transition-property: height, visibility;
+                transition-property: height, visibility;
+                -webkit-transition-duration: 0.35s;
+                transition-duration: 0.35s;
+                -webkit-transition-timing-function: ease;
+                transition-timing-function: ease;
+            }
+            .show {
+                transform: none !important;
+                background: var(--st-main) !important;
             }
             .navbar-collapse {
+                transition: transform 400ms ease, background 300ms ease-in, -webkit-transform 400ms ease;
                 @include lt-md {
-                    left: 0;
-                    position: absolute;
+                    transform: translateX(100%);
+                    position: fixed;
                     top: 0;
+                    left: 0;
                     width: 100%;
-                    background: var(--st-main);
+                    height: 100%;
+                    z-index: 4;
+                    background: var($--st-blue);
                 }
                 .navbar-nav {
                     margin-right: auto;
                     margin-left: auto;
                     @include lt-md {
                         height: 100vh;
-                        margin-top: 10vh;
+                        margin-top: 12vh;
                         padding: 0 15px;
                     }
                     .menu-centered-desktop {
@@ -113,6 +121,28 @@
                                     }
                                 }
                             }
+                            .dropdown-menu {
+                                background: var(--st-main);
+                                border: none;
+                                padding-top: 15px;
+                                padding: 0;
+                                .dropdown-item {
+                                    padding: 0;
+                                    padding-top: 20px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    a {
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 19px;
+                                        line-height: 163%;
+                                        text-decoration: none;
+                                        &:first-child {
+                                            padding-bottom: 15px;
+                                        }
+                                    }
+                                }
+                            }
                         }
                         .nav-item {
                             font-style: normal;
@@ -127,14 +157,12 @@
                                 font-style: normal;
                                 font-size: 21px;
                                 line-height: 163%;
-                                padding: 12px 0;
+                                font-weight: 500;
+                                padding: 13px 0;
                             }
                             a {
                                 color: var(--st-white); //changes for dropdown
                             }
-                        }
-                        .button-item-navbar {
-
                         }
                     }
                 }
@@ -158,69 +186,6 @@
                     .button-item-navbar {
                         padding: 0;
                         padding-left: 13px;
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-//scss-docs-start navbar-setup for MOBILE
-@include lt-md {
-    .navbar-container {
-        padding-top: 1vh;
-        padding-bottom: 1vh;
-    }
-    .navbar-toggler {
-        z-index: 5;
-        border: none !important;
-        padding: 0 !important;
-        &:focus {
-            box-shadow: none !important;
-        }
-    }
-    .hidden-cross-menu {
-        display: none;
-    }
-    .hidden-hamburger-menu {
-        display: none;
-    }
-    .menu-right-desktop {
-        .nav-item {
-            font-style: normal;
-            font-weight: 400;
-            font-size: 21px;
-            line-height: 156.02%;
-            letter-spacing: -0.01em;
-            color: var(--st-white);
-            text-decoration: none;
-        }
-    }
-    .navbar-collapse {
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        background: var(--st-main);
-        .navbar-nav {
-            height: 100vh;
-            margin-top: 10vh;
-            padding: 0 20px;
-            .menu-centered-desktop {
-                display: flex;
-                flex-direction: column;
-                .nav-item {
-                    padding-bottom: 24px;
-                }
-                .dropdown {
-                    .dropdown-toggle {
-                        color: var(--st-white);
-                        &::after {
-                            content: url('../../Images/DropdownIconMobile.svg');
-                            float: right;
-
-                        }
                     }
                 }
             }

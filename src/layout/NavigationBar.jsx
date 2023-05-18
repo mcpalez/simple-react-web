@@ -1,16 +1,16 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import Home from '../pages/Home';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import '../assets/Styles/Layout/navigationbar.scss';
-import Home from '../pages/Home';
 import { ReactComponent as CrossMenuIcon } from '../assets/Images/CrossMenuIcon.svg';
 import { ReactComponent as HamburgerMenuIcon } from '../assets/Images/HamburgerMenuIcon.svg';
 import { ReactComponent as Logo } from '../assets/Images/Logo.svg';
+import { useState, useEffect } from 'react';
 import 'bootstrap/scss/bootstrap.scss';
+import '../assets/Styles/Layout/navigationbar.scss';
 
 function NavigationBar() {
 	const scrollDirection = useScrollDirection();
@@ -57,7 +57,8 @@ function NavigationBar() {
 					<div className='menu-centered-desktop'>
 						<NavDropdown title="Services" id="basic-nav-dropdown">
 							<NavDropdown.Item href="#action/3.1">
-								<Link to='/'>Web development</Link>
+								<Link to='/'>Development services</Link>
+								<Link to='/'>UX and UI services</Link>
 							</NavDropdown.Item>
 						</NavDropdown>
 						<Link className='nav-item' to='/'>About</Link>
