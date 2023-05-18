@@ -1,0 +1,102 @@
+@import './_mixins.scss';
+
+//scss-docs-start colors
+    $--st-black: #020202;
+    $--st-white: #FFFFFF;
+    $--st-main: #201F34;
+    $--st-blue: #00A3FF;
+    $--st-blue-100: #1E87FF;
+    $--st-gray-100: #FBFBFC;
+    $--st-gray-200: #E8E8E8;
+    $--st-gray-300: #DEDEDE;
+
+:root {
+    --st-black: #{$--st-black};
+    --st-white: #{$--st-white};
+    --st-main: #{$--st-main};
+    --st-blue: #{$--st-blue};
+    --st-blue-100: #{$--st-blue-100};
+    --st-gray-100: #{$--st-gray-100};
+    --st-gray-200: #{$--st-gray-200};
+    --st-gray-300: #{$--st-gray-300};
+}
+//scss-docs-end colors
+
+//scss-docs-start fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+//scss-docs-end fonts
+
+//Containers
+//scss-docs-start container-breakpoints
+
+//scss-docs-end container-breakpoints
+
+
+//Here you can edit your text styles, size etc.
+//scss-docs-start text-styles
+
+body {
+    font-family: 'Inter';
+}
+
+//scss-docs-end text-styles
+
+
+//Button styles can be changed here.
+//scss-docs-start buttons
+
+.button-primary-filled__navbar {
+    background: var(--st-blue-100);
+    color: var(--st-white);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 12px 26px;
+    gap: 10px;
+    border-radius: 12px;
+    border: none;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.01em;
+    @include lt-md {
+        width: 100%;
+        justify-content: center;
+        font-size: 18px;
+    }
+}
+
+//scss-docs-end buttons
+
+
+//scsss-docs-start helpers-view
+
+@include lt-md {
+    .only-on--mobile {
+        display: unset;
+    }
+}
+
+@include gt-md {
+    .only-on--mobile {
+        display: none;
+    }
+}
+
+@include lt-md {
+    .only-on--desktop {
+        display: none;
+    }
+}
+
+@include gt-md {
+    .only-on--desktop {
+        display: unset;
+    }
+}
