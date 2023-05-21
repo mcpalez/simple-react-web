@@ -1,8 +1,11 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container';
 
 const Development = () => {
   return (
-    <div>Development</div>
+    <Container>
+        
+    </Container>
   )
 }
 

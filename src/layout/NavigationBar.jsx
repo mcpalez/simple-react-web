@@ -46,7 +46,7 @@ function NavigationBar() {
 			<Navbar expand="lg">
 			<Container className='navbar-container'>
 				<Navbar.Brand href="#home" className='logo-navbar'>
-					<Logo />
+					<Link to='/'><Logo /></Link>
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" className={isActive ? 'active-hamburger' : ''} onClick={handleClick}>
 					<HamburgerMenuIcon className={isActive ? 'hidden-hamburger-menu' : 'shown-hamburger-menu'} />
