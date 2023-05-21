@@ -1,6 +1,7 @@
 @import '../mixins.scss';
 @import '../variables.scss';
 
+
 /* scss-docs-start */
 .app-header--hide {
     //hiding navbar on scroll down style
@@ -21,7 +22,7 @@
     left: 0;
     width: 100%;
     z-index: 999;
-    transition: transform 600ms ease,background 600ms ease,-webkit-transform 600ms ease;
+    transition: transform 600ms ease,-webkit-transform 600ms ease;
     .navbar {
         padding-top: 19px !important;
         padding-bottom: 19px !important;
@@ -61,20 +62,23 @@
                     display: none;
                 }
             }
+            // .collapsing {
+            //     -webkit-transition-property: height, visibility;
+            //     transition-property: height, visibility;
+            //     -webkit-transition-duration: 0.35s;
+            //     transition-duration: 0.35s;
+            //     -webkit-transition-timing-function: ease;
+            //     transition-timing-function: ease;
+            // }
             .collapsing {
-                -webkit-transition-property: height, visibility;
-                transition-property: height, visibility;
-                -webkit-transition-duration: 0.35s;
-                transition-duration: 0.35s;
-                -webkit-transition-timing-function: ease;
-                transition-timing-function: ease;
+                transition: none;
             }
             .show {
                 transform: none !important;
                 background: var(--st-main) !important;
             }
             .navbar-collapse {
-                transition: transform 400ms ease, background 300ms ease-in, -webkit-transform 400ms ease;
+                //transition: transform 400ms ease, -webkit-transform 400ms ease;
                 @include lt-md {
                     transform: translateX(100%);
                     position: fixed;
@@ -153,6 +157,9 @@
                             color: var(--st-white);
                             padding: 0 17px;
                             text-decoration: none;
+                            @include lt-lg {
+                                font-size: 14px;
+                            }
                             @include lt-md {
                                 font-style: normal;
                                 font-size: 21px;
@@ -179,6 +186,9 @@
                         color: var(--st-white);
                         padding: 0 17px;
                         text-decoration: none;
+                        @include lt-lg {
+                            font-size: 14px;
+                        }
                         @include lt-md {
                             font-size: 21px;
                         }

@@ -26,16 +26,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 //scss-docs-end fonts
 
-//Containers
-//scss-docs-start container-breakpoints
-
-//scss-docs-end container-breakpoints
-
 
 //Here you can edit your text styles, size etc.
 //scss-docs-start text-styles
 
-body {
+body, html {
     font-family: 'Inter';
 }
 
@@ -65,6 +60,9 @@ body {
     display: flex;
     align-items: center;
     letter-spacing: -0.01em;
+    @include lt-lg {
+        font-size: 15px;
+    }
     @include lt-md {
         width: 100%;
         justify-content: center;
@@ -76,15 +74,34 @@ body {
 
 
 //scsss-docs-start helpers-view
+// desktop--hidden & mobile--hidden classess
 
 @include gt-md {
-    .only-on--mobile {
-        display: none;
+    .desktop--hidden {
+        display: none !important;
+    }
+}
+
+@include gt-sm {
+    .desktop--hidden {
+        display: none !important;
     }
 }
 
 @include lt-md {
-    .only-on--desktop {
-        display: none;
+    .mobile--hidden {
+        display: none !important;
+    }
+}
+
+@include lt-md {
+    .mobile--hidden {
+        display: none !important;
+    }
+}
+
+@include lt-sm {
+    .mobile--hidden {
+        display: none !important;
     }
 }

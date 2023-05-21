@@ -1,5 +1,6 @@
 import React from 'react';
 import Home from '../pages/Home';
+import Development from '../pages/Development';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -9,7 +10,6 @@ import { ReactComponent as CrossMenuIcon } from '../assets/Images/CrossMenuIcon.
 import { ReactComponent as HamburgerMenuIcon } from '../assets/Images/HamburgerMenuIcon.svg';
 import { ReactComponent as Logo } from '../assets/Images/Logo.svg';
 import { useState, useEffect } from 'react';
-import 'bootstrap/scss/bootstrap.scss';
 import '../assets/Styles/Layout/navigationbar.scss';
 
 function NavigationBar() {
@@ -57,7 +57,7 @@ function NavigationBar() {
 					<div className='menu-centered-desktop'>
 						<NavDropdown title="Services" id="basic-nav-dropdown">
 							<NavDropdown.Item href="#action/3.1">
-								<Link to='/'>Development services</Link>
+								<Link to='/services/development'>Development services</Link>
 								<Link to='/'>UX and UI services</Link>
 							</NavDropdown.Item>
 						</NavDropdown>
@@ -66,13 +66,13 @@ function NavigationBar() {
 						<Link className='nav-item' to='/'>Insights</Link>
 						<Link className='nav-item' to='/'>How to start?</Link>
 						<Link className='nav-item' to='/'>Resources</Link>
-						<Link className='nav-item only-on--mobile' to='/'>Contact</Link>
-						<Link className='nav-item button-item-navbar only-on--mobile' to='/'>
+						<Link className='nav-item desktop--hidden' to='/'>Contact</Link>
+						<Link className='nav-item button-item-navbar desktop--hidden' to='/'>
 							<button className='button-primary-filled__navbar'>Start a project</button>
 						</Link>
 					</div>
 				</Nav>
-				<div className='menu-right-desktop only-on--desktop'>
+				<div className='menu-right-desktop mobile--hidden'>
 					<Link className='nav-item only-on--desktop' to='/'>Contact us</Link>
 					<Link className='nav-item button-item-navbar' to='/'>
 						<button className='button-primary-filled__navbar'>Start a project</button>
@@ -84,6 +84,7 @@ function NavigationBar() {
         </header>
         <Routes>
           <Route path='/' element={<Home />}/>
+		  <Route path='/services/development' element={<Development />}/>
         </Routes>
       </Router>
   )
