@@ -1,11 +1,11 @@
 import React from 'react';
 import { NavigationBar } from './layout';
 import { Footer } from './layout';
-import './assets/Styles/_variables.scss'
+import './assets/styles/_variables.scss'
 
 const App = () => {
   return (
-    <div className='App'>
+    <div className='app-main'>
       <NavigationBar />
       <Footer />
     </div>

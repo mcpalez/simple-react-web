@@ -6,11 +6,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { ReactComponent as CrossMenuIcon } from '../assets/Images/CrossMenuIcon.svg';
-import { ReactComponent as HamburgerMenuIcon } from '../assets/Images/HamburgerMenuIcon.svg';
-import { ReactComponent as Logo } from '../assets/Images/Logo.svg';
-import { useState, useEffect } from 'react';
-import '../assets/Styles/Layout/navigationbar.scss';
+import { ReactComponent as CrossMenuIcon } from '../assets/images/CrossMenuIcon.svg';
+import { ReactComponent as HamburgerMenuIcon } from '../assets/images/HamburgerMenuIcon.svg';
+import { ReactComponent as Logo } from '../assets/images/Logo.svg';
+import { useState, useEffect, useRef } from 'react';
+import '../assets/styles/layout/navigationbar.scss';
 
 function NavigationBar() {
 	const scrollDirection = useScrollDirection();
@@ -40,24 +40,31 @@ function NavigationBar() {
 		document.body.classList.toggle('mobile-menu-open');
 	};
 
+	const navButton = useRef(null);
+	const linksContainerRef = useRef(null);
+	function collapseNav() {
+		navButton.current.classList.toggle("collapsed");
+		linksContainerRef.current.classList.remove("show");
+	};
+
   return (
       <Router>
         <header className={`app-header ${ scrollDirection === "down" ? "app-header--hide" : "app-header--show"}`}>
 			<Navbar expand="lg">
 			<Container className='navbar-container'>
-				<Navbar.Brand href="#home" className='logo-navbar'>
-					<Link to='/'><Logo /></Link>
+				<Navbar.Brand href="/" className='logo-navbar' onClick={()=>{ collapseNav(); }}>
+					<Logo />
 				</Navbar.Brand>
-				<Navbar.Toggle aria-controls="basic-navbar-nav" className={isActive ? 'active-hamburger' : ''} onClick={handleClick}>
+				<Navbar.Toggle aria-controls="basic-navbar-nav" className={isActive ? 'active-hamburger' : ''} onClick={handleClick} ref={navButton}>
 					<HamburgerMenuIcon className={isActive ? 'hidden-hamburger-menu' : 'shown-hamburger-menu'} />
 					<CrossMenuIcon className={isActive ? 'shown-cross-menu' : 'hidden-cross-menu'} />
 				</Navbar.Toggle>
-				<Navbar.Collapse id="basic-navbar-nav">
+				<Navbar.Collapse id="basic-navbar-nav" ref={linksContainerRef}>
 				<Nav>
 					<div className='menu-centered-desktop'>
 						<NavDropdown title="Services" id="basic-nav-dropdown">
 							<NavDropdown.Item href="#action/3.1">
-								<Link to='/services/development'>Development services</Link>
+								<Link to='/services/development' onClick={()=>{ collapseNav(); }}>Development services</Link>
 								<Link to='/'>UX and UI services</Link>
 							</NavDropdown.Item>
 						</NavDropdown>

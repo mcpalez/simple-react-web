@@ -1,11 +1,11 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
+import Hero from '../components/development/Hero'
 
 const Development = () => {
   return (
-    <Container>
-        
-    </Container>
+    <main className='app-main'>
+      <Hero />
+    </main>
   )
 }
 
