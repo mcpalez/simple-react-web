@@ -1,6 +1,4 @@
 import React from 'react';
-import Home from '../pages/Home';
-import Development from '../pages/Development';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -11,6 +9,8 @@ import { ReactComponent as HamburgerMenuIcon } from '../assets/images/HamburgerM
 import { ReactComponent as Logo } from '../assets/images/Logo.svg';
 import { useState, useEffect, useRef } from 'react';
 import '../assets/styles/layout/navigationbar.scss';
+import Home from '../pages/Home';
+import Development from '../pages/Development';
 
 function NavigationBar() {
 	const scrollDirection = useScrollDirection();
@@ -43,7 +43,7 @@ function NavigationBar() {
 	const navButton = useRef(null);
 	const linksContainerRef = useRef(null);
 	function collapseNav() {
-		navButton.current.classList.toggle("collapsed");
+		navButton.current.classList.add("collapsed");
 		linksContainerRef.current.classList.remove("show");
 	};
 
@@ -52,12 +52,12 @@ function NavigationBar() {
         <header className={`app-header ${ scrollDirection === "down" ? "app-header--hide" : "app-header--show"}`}>
 			<Navbar expand="lg">
 			<Container className='navbar-container'>
-				<Navbar.Brand href="/" className='logo-navbar' onClick={()=>{ collapseNav(); }}>
+				<Navbar.Brand href="/" className='logo-navbar' onClick={collapseNav}>
 					<Logo />
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" className={isActive ? 'active-hamburger' : ''} onClick={handleClick} ref={navButton}>
-					<HamburgerMenuIcon className={isActive ? 'hidden-hamburger-menu' : 'shown-hamburger-menu'} />
-					<CrossMenuIcon className={isActive ? 'shown-cross-menu' : 'hidden-cross-menu'} />
+					<HamburgerMenuIcon className={isActive ? 'hidden-hamburger-menu' : 'shown-hamburger-menu'}/>
+					<CrossMenuIcon className={isActive ? 'shown-cross-menu' : 'hidden-cross-menu'}/>
 				</Navbar.Toggle>
 				<Navbar.Collapse id="basic-navbar-nav" ref={linksContainerRef}>
 				<Nav>
@@ -68,13 +68,13 @@ function NavigationBar() {
 								<Link to='/'>UX and UI services</Link>
 							</NavDropdown.Item>
 						</NavDropdown>
-						<Link className='nav-item' to='/'>About</Link>
-						<Link className='nav-item' to='/'>Work</Link>
-						<Link className='nav-item' to='/'>Insights</Link>
-						<Link className='nav-item' to='/'>How to start?</Link>
-						<Link className='nav-item' to='/'>Resources</Link>
-						<Link className='nav-item desktop--hidden' to='/'>Contact</Link>
-						<Link className='nav-item button-item-navbar desktop--hidden' to='/'>
+						<a className='nav-item' href='/services/development'>About</a>
+						<Link className='nav-item' onClick={()=>{ collapseNav(); }}>Work</Link>
+						<Link className='nav-item' onClick={()=>{ collapseNav(); }}>Insights</Link>
+						<Link className='nav-item' onClick={()=>{ collapseNav(); }}>How to start?</Link>
+						<Link to='/' className='nav-item' onClick={()=>{ collapseNav(); }}>Resources</Link>
+						<Link className='nav-item desktop--hidden' onClick={()=>{ collapseNav(); }}>Contact</Link>
+						<Link className='nav-item button-item-navbar desktop--hidden' onClick={()=>{ collapseNav(); }}>
 							<button className='button-primary-filled__navbar'>Start a project</button>
 						</Link>
 					</div>
