@@ -6,8 +6,7 @@
     .container {
         .row-hero {
             align-items: center;
-            .col-default {
-                gap: 20px;
+            .col-hero {
                 img {
                     height: auto;
                     max-width: 100%;
@@ -16,6 +15,9 @@
                     @include gt-md {
                         max-width: 610px;
                     }
+                }
+                p {
+                    max-width: 600px;
                 }
             }
             .col-img-hero {

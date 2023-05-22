@@ -1,32 +1,51 @@
 @import './_mixins.scss';
 
-//scss-docs-start colors
+//Colors
+    //$--st-main: #10312e;
+    $--st-main: #020202;
     $--st-black: #020202;
     $--st-white: #FFFFFF;
-    $--st-main: #201F34;
-    $--st-blue: #00A3FF;
-    $--st-blue-100: #1E87FF;
     $--st-gray-100: #FBFBFC;
     $--st-gray-200: #E8E8E8;
     $--st-gray-300: #DEDEDE;
-
+    $--st-blue: #00A3FF;
+    $--st-blue-100: #1E87FF;
+    $--st-link: #208FD5;
+    $--st-active: #1bb3f7;
+    $--st-deep-blue: #003B99;
+    $--st-navy: #1A2347;
+    $--st-light-purple: #CAC0FA;
+    $--st-indigo: #8E75FF;
+    $--st-pink: #FD3B79;
+    $--st-yellow: #FEC83B;
+    $--st-orange-shade: #FAE5DE;
+    $--st-orange: #FF7752;
+    $--st-green: #19BE84;
+    
 :root {
+    --st-main: #{$--st-main};
     --st-black: #{$--st-black};
     --st-white: #{$--st-white};
-    --st-main: #{$--st-main};
-    --st-blue: #{$--st-blue};
-    --st-blue-100: #{$--st-blue-100};
     --st-gray-100: #{$--st-gray-100};
     --st-gray-200: #{$--st-gray-200};
     --st-gray-300: #{$--st-gray-300};
+    --st-blue: #{$--st-blue};
+    --st-blue-100: #{$--st-blue-100};
+    --st-link: #{$--st-link};
+    --st-active: #{$--st-active};
+    --st-deep-blue: #{$--st-deep-blue};
+    --st-navy: #{$--st-navy};
+    --st-light-purple: #{$--st-light-purple};
+    --st-indigo: #{$--st-indigo};
+    --st-pink: #{$--st-pink};
+    --st-yellow: #{$--st-yellow};
+    --st-orange-shade: #{$--st-orange-shade};
+    --st-orange: #{$--st-orange};
+    --st-green: #{$--st-green};
 }
-//scss-docs-end colors
 
-//scss-docs-start fonts
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-//scss-docs-end fonts
 
-//scss-docs-start globals container, spacing styles
+//Container presets
 .top--spacing {
     padding-top: 170px;
     padding-bottom: 100px;
@@ -54,10 +73,8 @@
 
     
 
-//scss-docs-end globals
-
-//Here you can edit your text styles, size etc.
-//scss-docs-start text-styles
+//Text presets
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body, html {
     font-family: 'Inter' !important;
@@ -84,12 +101,60 @@ h1, .h1-default {
     }
 }
 
-//scss-docs-end text-styles
+h2, .h2-default {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 46px;
+    line-height: 139%;
+    letter-spacing: -0.02em;
+    @include lt-md {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 120%;
+    }
+}
+
+h3, .h3-default {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 139%;
+    letter-spacing: -0.02em;
+    @include lt-md {
+        font-weight: 600;
+        font-size: 23px;
+    }
+}
+
+h4, .h4-default {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 130%;
+    letter-spacing: -0.01em;
+    @include lt-md {
+        font-weight: 600;
+        font-size: 21px;
+        line-height: 120%;
+    }
+}
+
+h5, .h5-default {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 112%;
+    letter-spacing: -0.01em;
+}
 
 
-//Button styles can be changed here.
-//scss-docs-start buttons
 
+
+
+
+
+
+//Buttons
 .button-primary-filled__navbar {
     background: var(--st-blue-100);
     color: var(--st-white);
@@ -136,13 +201,43 @@ h1, .h1-default {
     letter-spacing: -0.01em;
     background: var(--st-blue-100);
     color: var(--st-white);
+    border-radius: 1.3vh;
 }
 
-//scss-docs-end buttons
+.button-primary-outlined {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 29px;
+    gap: 10px;
+    position: relative;
+    width: 155px;
+    height: 50px;
+    border: 1px solid #020202;
+    border-radius: 1.2vh;
+}
+
+.button-link-underlined {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 163%;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.01em;
+    text-decoration-line: underline;
+    color: var(--st-link);
+}
 
 
-//scsss-docs-start helpers-view
-// desktop--hidden & mobile--hidden classess
+
+
+
+
+
+
+//Desktop & Mobile hidings
 
 @include gt-md {
     .desktop--hidden {

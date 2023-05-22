@@ -10,11 +10,11 @@ const Hero = () => {
     <section className='services__hero top--spacing'>
         <Container>
             <Row className='row-hero'>
-                <Col md={6} className='col-default'>
+                <Col md={6} className='col-hero'>
                     <h1 className='h1-default'>We shape your<br/> products and services</h1>
                     <p className='p-default'>Slingit is an agency that designs and develops fast e-commerce, marketing websites, web applications, and mobile apps.</p>
                 </Col>
-                <Col md={6} className='col-default col-img-hero'>
+                <Col md={6} className='col-img-hero col-hero'>
                     <img alt='' src={hero_services} className='mobile--hidden'></img>
                     <img alt='' src={hero_services_mobile} className='desktop--hidden'></img>
                 </Col>
