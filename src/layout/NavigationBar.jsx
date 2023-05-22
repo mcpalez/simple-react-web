@@ -11,6 +11,7 @@ import { useState, useEffect, useRef } from 'react';
 import '../assets/styles/layout/navigationbar.scss';
 import Home from '../pages/Home';
 import Development from '../pages/Development';
+import Services from '../pages/Services';
 
 function NavigationBar() {
 	const scrollDirection = useScrollDirection();
@@ -68,7 +69,7 @@ function NavigationBar() {
 								<Link to='/'>UX and UI services</Link>
 							</NavDropdown.Item>
 						</NavDropdown>
-						<a className='nav-item' href='/services/development'>About</a>
+						<Link className='nav-item' href='/services/development'>About</Link>
 						<Link className='nav-item' onClick={()=>{ collapseNav(); }}>Work</Link>
 						<Link className='nav-item' onClick={()=>{ collapseNav(); }}>Insights</Link>
 						<Link className='nav-item' onClick={()=>{ collapseNav(); }}>How to start?</Link>
@@ -90,8 +91,10 @@ function NavigationBar() {
 			</Navbar>
         </header>
         <Routes>
-          <Route path='/' element={<Home />}/>
-		  <Route path='/services/development' element={<Development />}/>
+          	<Route path='/' element={<Home />}/>
+		  	<Route path='services' element={<Services />}>
+				<Route path='development-services' element={<Development />}></Route>
+			</Route>
         </Routes>
       </Router>
   )

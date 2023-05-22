@@ -3,7 +3,7 @@ import Hero from '../components/development/Hero'
 
 const Development = () => {
   return (
-    <main className='app-main'>
+    <main className='development__page'>
       <Hero />
     </main>
   )

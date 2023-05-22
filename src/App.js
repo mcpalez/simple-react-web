@@ -5,7 +5,7 @@ import './assets/styles/_variables.scss'
 
 const App = () => {
   return (
-    <div className='app-main'>
+    <div className='__app'>
       <NavigationBar />
       <Footer />
     </div>
