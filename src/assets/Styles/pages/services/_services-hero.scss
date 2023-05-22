@@ -4,9 +4,22 @@
 .services__hero {
     background: var(--st-main);
     .container {
-        .row {
+        .row-hero {
+            align-items: center;
             .col-default {
                 gap: 20px;
+                img {
+                    height: auto;
+                    max-width: 100%;
+                    border-radius: 13px;
+                    width: 100%;
+                    @include gt-md {
+                        max-width: 610px;
+                    }
+                }
+            }
+            .col-img-hero {
+                text-align: right;
             }
         }
     }

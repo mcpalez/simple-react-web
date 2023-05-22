@@ -10,7 +10,8 @@
 .mobile-menu-open {
     //mobile menu prevent scroll on open
     height: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 /* scss-docs-end */
 
@@ -95,7 +96,7 @@
                     @include lt-md {
                         height: 100vh;
                         margin-top: 12vh;
-                        padding: 0 15px;
+                        padding: 0 20px;
                     }
                     .menu-centered-desktop {
                         display: flex;

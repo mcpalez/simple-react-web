@@ -28,14 +28,31 @@
 
 //scss-docs-start globals container, spacing styles
 .top--spacing {
-    padding-top: 25vh;
+    padding-top: 170px;
+    padding-bottom: 100px;
 }
 
 @include lt-md {
     .top--spacing {
         padding-top: 150px;
+        padding-bottom: 100px;
     }
 }
+
+@media (min-width: 1400px) { //setting up container width, manually without editing bootstrap.scss
+    .container {
+        max-width: 1450px !important;
+    }
+}
+
+@include lt-sm {
+    .container {
+        padding-right: 20px !important;
+        padding-left: 20px !important;
+    }
+}
+
+    
 
 //scss-docs-end globals
 
