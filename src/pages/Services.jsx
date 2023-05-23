@@ -6,7 +6,7 @@ import '../assets/styles/services/_services.scss'
 
 const Services = () => {
     return (
-        <main className='services__page'>
+        <main className='app-main services__page'>
             <Hero/>
             <WeDo/>
         </main>
