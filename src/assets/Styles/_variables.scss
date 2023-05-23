@@ -86,6 +86,7 @@ p, .p-default {
     line-height: 163%;
     letter-spacing: -0.01em;
     color: var(--st-white);
+    margin-bottom: 0;
 }
 
 h1, .h1-default {
@@ -107,6 +108,7 @@ h2, .h2-default {
     font-size: 46px;
     line-height: 139%;
     letter-spacing: -0.02em;
+    margin-bottom: 0;
     @include lt-md {
         font-weight: 600;
         font-size: 28px;
@@ -120,6 +122,7 @@ h3, .h3-default {
     font-size: 35px;
     line-height: 139%;
     letter-spacing: -0.02em;
+    margin-bottom: 0;
     @include lt-md {
         font-weight: 600;
         font-size: 23px;
@@ -132,6 +135,7 @@ h4, .h4-default {
     font-size: 30px;
     line-height: 130%;
     letter-spacing: -0.01em;
+    margin-bottom: 0;
     @include lt-md {
         font-weight: 500;
         font-size: 23px;
@@ -145,6 +149,7 @@ h5, .h5-default {
     font-size: 25px;
     line-height: 112%;
     letter-spacing: -0.01em;
+    margin-bottom: 0;
 }
 
 

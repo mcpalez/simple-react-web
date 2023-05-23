@@ -9,6 +9,9 @@
             .col-hero__content {
                 p {
                     max-width: 600px;
+                    @include lt-md {
+                        margin-bottom: 2.5vh;
+                    }
                 }
             }
             .col-hero__wrapper {
