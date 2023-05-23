@@ -1,7 +1,7 @@
 import React from 'react';
-import Hero from '../components/services/Hero';
-import WeDo from '../components/services/WeDo'
-import '../assets/styles/pages/services/_services.scss'
+import Hero from '../components/pages/services/Hero';
+import WeDo from '../components/pages/services/WeDo'
+import '../assets/styles/services/_services.scss'
 
 
 const Services = () => {

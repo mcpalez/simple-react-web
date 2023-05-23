@@ -186,36 +186,42 @@ h5, .h5-default {
 }
 
 .button-primary-filled {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     padding: 14px 29px;
     gap: 10px;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
-    display: flex;
-    align-items: center;
     letter-spacing: -0.01em;
     background: var(--st-blue-100);
     color: var(--st-white);
     border-radius: 1.3vh;
+    border: none;
+    a { text-decoration: none; 
+        color: var(--st-white); 
+        &:hover { 
+            color: var(--st-white); 
+        }
+    }
 }
 
 .button-primary-outlined {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    background: transparent;
     padding: 14px 29px;
-    gap: 10px;
-    position: relative;
-    width: 155px;
-    height: 50px;
+    color: var(--st-black);
     border: 1px solid #020202;
     border-radius: 1.2vh;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+    a { text-decoration: none; 
+        color: var(--st-black); 
+        &:hover { 
+            color: var(--st-black); 
+        }
+    } 
 }
 
 .button-link-underlined {

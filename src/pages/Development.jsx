@@ -1,5 +1,5 @@
 import React from 'react';
-import Hero from '../components/development/Hero'
+import Hero from '../components/pages/development/Hero'
 
 const Development = () => {
   return (
