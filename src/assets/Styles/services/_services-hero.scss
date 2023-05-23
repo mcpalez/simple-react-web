@@ -4,9 +4,15 @@
 .services__hero {
     background: var(--st-main);
     .container {
-        .row-hero {
+        .row-hero__hero {
             align-items: center;
-            .col-hero {
+            .col-hero__content {
+                p {
+                    max-width: 600px;
+                }
+            }
+            .col-hero__wrapper {
+                text-align: right;
                 img {
                     height: auto;
                     max-width: 100%;
@@ -16,12 +22,6 @@
                         max-width: 610px;
                     }
                 }
-                p {
-                    max-width: 600px;
-                }
-            }
-            .col-img-hero {
-                text-align: right;
             }
         }
     }
