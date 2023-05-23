@@ -80,6 +80,10 @@ body, html {
     font-family: 'Inter' !important;
 }
 
+a {
+    text-decoration: none !important;
+}
+
 p, .p-default {
     font-weight: 300;
     font-size: 19px;
@@ -150,6 +154,12 @@ h5, .h5-default {
     line-height: 112%;
     letter-spacing: -0.01em;
     margin-bottom: 0;
+}
+
+.underlined-text {
+    font-style: normal;
+    text-decoration-line: underline;
+    color: var(--st-link);
 }
 
 
