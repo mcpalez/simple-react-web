@@ -1,0 +1,53 @@
+.services__wedo {
+    padding-top: 12vh;
+    padding-bottom: 16vh;
+    background: var(--st-white);
+    @include lt-md {
+        padding-top: 8vh;
+        padding-bottom: 8vh;
+    }
+    .container {
+        .row-wedo__introduction {
+            .col-wedo__introduction {
+                h2 {
+                    color: var(--st-black);
+                }
+                p {
+                    color: var(--st-black);
+                    max-width: 90vh;
+                }
+            }
+        }
+        .row-wedo__blocks {
+            padding-top: 11vh;
+            @include gt-md {
+                --bs-gutter-x: 6vh;
+            }
+            .col-wedo__blocks {
+                @include lt-md {
+                    &:first-child {
+                        padding-bottom: 5vh;
+                    }
+                }
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+                .wedo-block__description {
+                    padding-top: 4vh;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    p {
+                        color: var(--st-black);
+                    }
+                    .wedo__buttons {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
