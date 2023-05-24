@@ -1,0 +1,99 @@
+@import '../mixins.scss';
+@import '../variables.scss';
+
+.app-footer {
+    background: var(--st-main);
+    .container-footer__container {
+        .row-footer__body {
+            padding-top: 11vh;
+            padding-bottom: 15vh;
+            .col-footer {
+                .content-footer {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2.8vh;
+                    .logo-footer {
+                        width: 8.8vh;
+                        height: auto;
+                    }
+                    p {
+                        font-size: 17px;
+                        @include lt-md {
+                            &:nth-child(3) {
+                                order: 4;
+                            }
+                        }
+                        &:nth-child(4) {
+                            font-weight: 600;
+                        }
+                        a {
+                            color: var(--st-link);
+                        }
+                    }
+                    .social-footer__container {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 20px;
+                    }
+                }
+                .links-footer__container {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.8vh;
+                    p {
+                        margin-bottom: 0;
+                    }
+                    .links-footer__heading {
+                        font-size: 18px;
+                        font-weight: 500;
+                        margin-bottom: 2.2vh;
+                        a {
+                            color: var(--st-white);
+                        }
+                    }
+                    .links-footer__link {
+                        font-size: 18px;
+                        a {
+                            color: var(--st-white);
+                        }
+                    }
+                }
+                .accordion-footer {
+                    background: var(--st-main);
+                    border: none;
+                    border-width: 0;
+                    padding-bottom: 4.5vh;
+                    .accordion-item {
+                        background: var(--st-main);
+                        border: none;
+                        .accordion-header {
+                            .accordion-button {
+                                padding: 0;
+                                font-size: 19px;
+                                font-weight: 500;
+                                color: var(--st-white);
+                                padding-bottom: 4.5vh;
+                                background: var(--st-main);
+                                &:focus {
+                                    border: none;
+                                    box-shadow: none;
+                                }
+                                &:not(.collapsed) {
+                                    box-shadow: none;
+                                    &::after {
+                                        transform: rotate(-90deg);
+                                    }
+                                }
+                                &:after {
+                                    background-image: url('../../images/DropdownIconMobile.svg');
+                                    background-size: 2vh 2vh;
+                                    background-position: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
