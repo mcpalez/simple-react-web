@@ -91,6 +91,28 @@
                                 }
                             }
                         }
+                        .accordion-body {
+                            padding: 0;
+                            padding-bottom: 2vh;
+                            .row {
+                                .accordion-footer__links {
+                                    .links-footer__heading {
+                                        font-size: 18px;
+                                        font-weight: 500;
+                                        margin-bottom: 2.2vh;
+                                        a {
+                                            color: var(--st-white);
+                                        }
+                                    }
+                                    .links-footer__link {
+                                        font-size: 18px;
+                                        a {
+                                            color: var(--st-white);
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }

@@ -21,31 +21,61 @@ function Footer() {
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header>Pages</Accordion.Header>
                                 <Accordion.Body>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    <Row>
+                                        <Col xs={6} className='accordion-footer__links'>
+                                            <p className='links-footer__link'><a href='/'>Home</a></p>
+                                            <p className='links-footer__link'><a href='/'>Cooperation</a></p>
+                                            <p className='links-footer__link'><a href='/'>Offer and Benefits</a></p>
+                                            <p className='links-footer__link'><a href='/'>Contact</a></p>
+                                        </Col>
+                                        <Col xs={6} className='accordion-footer__links'>
+                                            <p className='links-footer__link'><a href='/'>Services</a></p>
+                                            <p className='links-footer__link'><a href='/'>Concept</a></p>
+                                            <p className='links-footer__link'><a href='/'>About</a></p>
+                                        </Col>
+                                    </Row>
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="1">
                                 <Accordion.Header>Solutions</Accordion.Header>
                                 <Accordion.Body>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    <Row>
+                                        <Col xs={6} className='accordion-footer__links'>
+                                            <p className='links-footer__link'><a href='/'>Front-End</a></p>
+                                            <p className='links-footer__link'><a href='/'>Web development</a></p>
+                                        </Col>
+                                        <Col xs={6} className='accordion-footer__links'>
+                                        <p className='links-footer__link'><a href='/'>CMS Solutions</a></p>
+                                            <p className='links-footer__link'><a href='/'>Web Design</a></p>
+                                        </Col>
+                                    </Row>
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="2">
-                                <Accordion.Header>Brand</Accordion.Header>
+                                <Accordion.Header>Resources</Accordion.Header>
                                 <Accordion.Body>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    <Row>
+                                        <Col xs={6} className='accordion-footer__links'>
+                                            <p className='links-footer__link'><a href='/'>How we work?</a></p>
+                                            <p className='links-footer__link'><a href='/'>Case study</a></p>
+                                        </Col>
+                                        <Col xs={6} className='accordion-footer__links'>
+                                            <p className='links-footer__link'><a href='/'>Insights</a></p>
+                                        </Col>
+                                    </Row>
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="3">
                                 <Accordion.Header>Rules & Terms</Accordion.Header>
                                 <Accordion.Body>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                </Accordion.Body>
-                            </Accordion.Item>
-                            <Accordion.Item eventKey="4">
-                                <Accordion.Header>Resources</Accordion.Header>
-                                <Accordion.Body>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    <Row>
+                                        <Col xs={6} className='accordion-footer__links'>
+                                            <p className='links-footer__link'><a href='/'>Terms of service</a></p>
+                                        </Col>
+                                        <Col xs={6} className='accordion-footer__links'>
+                                            <p className='links-footer__link'><a href='/'>Privacy policy</a></p>
+                                        </Col>
+                                    </Row>
                                 </Accordion.Body>
                             </Accordion.Item>
                         </Accordion>
@@ -80,7 +110,7 @@ function Footer() {
                             <p className='links-footer__link'><a href='/'>Contact</a></p>
                         </div>
                     </Col>
-                    <Col md={2} className='col-footer'>
+                    <Col md={2} className='col-footer col-footer__links mobile--hidden'>
                         <div className="links-footer__container mobile--hidden">
                             <p className='links-footer__heading'><a href='/'>Solutions</a></p>
                             <p className='links-footer__link'><a href='/'>Front-End</a></p>
@@ -92,7 +122,7 @@ function Footer() {
                             <p className='links-footer__link'><a href='/'>Terms of service</a></p>
                         </div>
                     </Col>
-                    <Col md={2} className='col-footer'>
+                    <Col md={2} className='col-footer col-footer__links mobile--hidden'>
                         <div className="links-footer__container mobile--hidden">
                             <p className='links-footer__heading'><a href='/'>Resources</a></p>
                             <p className='links-footer__link'><a href='/'>How we work?</a></p>

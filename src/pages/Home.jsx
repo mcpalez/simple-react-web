@@ -3,8 +3,7 @@ import React from 'react';
 
 const Home = () => {
     return (
-        <main className='app-main home__page' style={homeStyle}>
-            
+        <main className='app-main home__page' style={homeStyle}>    
         </main>
     )
 }
