@@ -4,11 +4,11 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Accordion from 'react-bootstrap/Accordion';
 import { ReactComponent as Logo } from '../assets/images/Logo.svg';
+import { ReactComponent as FacebookIcon } from '../assets/images/footer/Vector.svg';
 import { ReactComponent as MessengerIcon } from '../assets/images/footer/Vector-1.svg';
 import { ReactComponent as DribbbleIcon } from '../assets/images/footer/Vector-2.svg';
 import { ReactComponent as TwitterIcon } from '../assets/images/footer/Vector-3.svg';
 import { ReactComponent as InstagramIcon } from '../assets/images/footer/Vector-4.svg';
-import { ReactComponent as FacebookIcon } from '../assets/images/footer/Vector.svg';
 
 
 function Footer() {

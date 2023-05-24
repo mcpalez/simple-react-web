@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavigationBar } from './layout';
 import { Footer } from './layout';
-import './assets/styles/_variables.scss';
 import './assets/styles/app.scss'
 
 const App = () => {

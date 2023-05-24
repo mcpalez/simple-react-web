@@ -8,7 +8,6 @@ import { ReactComponent as CrossMenuIcon } from '../assets/images/CrossMenuIcon.
 import { ReactComponent as HamburgerMenuIcon } from '../assets/images/HamburgerMenuIcon.svg';
 import { ReactComponent as Logo } from '../assets/images/Logo.svg';
 import { useState, useEffect, useRef } from 'react';
-import '../assets/styles/layout/navigationbar.scss';
 import Home from '../pages/Home';
 import Development from '../pages/Development';
 import Services from '../pages/Services';
