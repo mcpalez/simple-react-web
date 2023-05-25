@@ -41,7 +41,7 @@ const WeDo = () => {
 					<img alt='' src={frame_02}></img>
 					<div className="wedo-block__description">
 						<h4 className='h4-default'>
-							Functional website development
+							We craft amazing experiences that lasts
 						</h4>
 						<p className='p-default'>
 							We take a comprehensive approach to building brand-new digital products from the ground up, combining creativity, strategy, and technology to craft solutions that are beautiful and functional.

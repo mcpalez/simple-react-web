@@ -10,7 +10,11 @@
         .row-wedo__introduction {
             .col-wedo__introduction {
                 h2 {
+                    padding-bottom: 2.4vh;
                     color: var(--st-black);
+                    @include lt-md {
+                        padding-bottom: 1.5vh;
+                    }
                 }
                 p {
                     color: var(--st-black);
@@ -26,7 +30,7 @@
             .col-wedo__blocks {
                 @include lt-md {
                     &:first-child {
-                        padding-bottom: 5vh;
+                        padding-bottom: 7vh;
                     }
                 }
                 img {

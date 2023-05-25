@@ -1,0 +1,39 @@
+.services__offer {
+    background: var(--st-gray-100);
+    padding-bottom: 15vh;
+    padding-top: 15vh;
+    .container {
+        .row-offer__introduction {
+            padding-bottom: 6vh;
+            .col-offer__introduction {
+                text-align: center;
+                h2 {
+                    text-align: center;
+                    margin-bottom: 2.5vh;
+                }
+                p {
+                    text-align: center;
+                    color: var(--st-black);
+                    max-width: 715px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding-bottom: 3.5vh;
+                }
+            }
+        }
+        .row-offer__blocks {
+            --bs-gutter-x: 6vh;
+            .col-offer__blocks {
+                padding-bottom: 13vh;
+                .col-offer__inner {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2.4vh;
+                    p {
+                        color: var(--st-black);
+                    }
+                }
+            }
+        }
+    }
+}
