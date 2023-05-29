@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from '../components/pages/services/Hero';
 import WeDo from '../components/pages/services/WeDo';
 import Offer from '../components/pages/services/Offer'
+import Capabilities from '../components/pages/services/Capabilities';
 
 
 const Services = () => {
@@ -10,6 +11,7 @@ const Services = () => {
             <Hero/>
             <WeDo/>
             <Offer/>
+            <Capabilities/>
         </main>
     )
 }

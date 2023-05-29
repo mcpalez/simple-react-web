@@ -1,9 +1,10 @@
 .services__offer {
     background: var(--st-gray-100);
-    padding-bottom: 15vh;
+    padding-bottom: 6vh;
     padding-top: 15vh;
     @include lt-md {
         padding-top: 4vh;
+        padding-bottom: 4vh;
     }
     .container {
         .row-offer__introduction {
