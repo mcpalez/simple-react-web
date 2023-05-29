@@ -2,6 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Accordion from 'react-bootstrap/Accordion'
 import { ReactComponent as DevelopmentIcon } from '../../../assets/images/services/icon_offer_1.svg';
 import { ReactComponent as WebApplicationsIcon } from '../../../assets/images/services/icon_offer_2.svg';
 import { ReactComponent as FrontendDevelopmentIcon } from '../../../assets/images/services/icon_offer_6.svg';
@@ -23,7 +24,7 @@ const Offer = () => {
                     </p>
                 </Col>
             </Row>
-            <Row className='row-offer__blocks'>
+            <Row className='row-offer__blocks mobile--hidden'>
                 <Col md={4} className='col-offer__blocks'>
                     <div className="col-offer__inner">
                         <DevelopmentIcon className='icon-offer'/>
@@ -89,6 +90,62 @@ const Offer = () => {
                             Looking for more information or you want to speak with our people? <em className='underlined-text'>Submit your info</em> and our representative will follow up with you as soon as possible. <em className='underlined-text'>You can checkout our FAQ.</em>
                         </p>
                     </div>
+                </Col>
+            </Row>
+            <Row className='row-offer__accordion desktop--hidden'>
+                <Col className='col-offer__accordion'>
+                    <Accordion className='accordion-offer'>
+                        <Accordion.Item eventKey="0">
+                            <Accordion.Header><em className='accordion-offer__total'>01</em>Website development</Accordion.Header>
+                            <Accordion.Body>
+                            <p className='p-default'>
+                            Website development is the process of building and maintaining a website using various programming languages, 
+                            frameworks, and tools. It involves designing the website, writing code, and ensuring its functionality and usability.
+                            </p>
+                            <button className='button-primary-outlined'>Build a new product</button>
+                            </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey="1">
+                            <Accordion.Header><em className='accordion-offer__total'>02</em>Web applications</Accordion.Header>
+                            <Accordion.Body>
+                            <p className='p-default'>
+                            Website development is the process of building and maintaining a website using various programming languages, 
+                            frameworks, and tools. It involves designing the website, writing code, and ensuring its functionality and usability.
+                            </p>
+                            <button className='button-primary-outlined'>Build a new product</button>
+                            </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey="2">
+                            <Accordion.Header><em className='accordion-offer__total'>03</em>Frontend development</Accordion.Header>
+                            <Accordion.Body>
+                            <p className='p-default'>
+                            Website development is the process of building and maintaining a website using various programming languages, 
+                            frameworks, and tools. It involves designing the website, writing code, and ensuring its functionality and usability.
+                            </p>
+                            <button className='button-primary-outlined'>Build a new product</button>
+                            </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey="3">
+                            <Accordion.Header><em className='accordion-offer__total'>04</em>Backend development</Accordion.Header>
+                            <Accordion.Body>
+                            <p className='p-default'>
+                            Website development is the process of building and maintaining a website using various programming languages, 
+                            frameworks, and tools. It involves designing the website, writing code, and ensuring its functionality and usability.
+                            </p>
+                            <button className='button-primary-outlined'>Build a new product</button>
+                            </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey="4">
+                            <Accordion.Header><em className='accordion-offer__total'>05</em>UX and UI design</Accordion.Header>
+                            <Accordion.Body>
+                            <p className='p-default'>
+                            Website development is the process of building and maintaining a website using various programming languages, 
+                            frameworks, and tools. It involves designing the website, writing code, and ensuring its functionality and usability.
+                            </p>
+                            <button className='button-primary-outlined'>Build a new product</button>
+                            </Accordion.Body>
+                        </Accordion.Item>
+                    </Accordion>
                 </Col>
             </Row>
         </Container>
