@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 
 const Capabilities = () => {
   return (
-    <section className='services_capabilities'>
+    <section className='services__capabilities'>
         <Container>
             <Row className='row-capabilities__introduction'>
                 <Col className='col-capabilities__introduction'>
