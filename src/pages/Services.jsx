@@ -3,6 +3,7 @@ import Hero from '../components/sections/services/Hero';
 import WeDo from '../components/sections/services/WeDo';
 import Offer from '../components/sections/services/Offer'
 import Capabilities from '../components/sections/services/Capabilities';
+import PreFooter from '../components/sections/prefooter/PreFooter';
 
 
 const Services = () => {
@@ -12,6 +13,7 @@ const Services = () => {
             <WeDo/>
             <Offer/>
             <Capabilities/>
+            <PreFooter/>
         </main>
     )
 }

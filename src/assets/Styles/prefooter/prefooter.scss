@@ -1,0 +1,35 @@
+.prefooter__global {
+    background: var(--st-light-blue);
+    padding-top: 10vh;
+    padding-bottom: 13vh;
+    @include lt-md {
+        padding-top: 8vh;
+        padding-bottom: 6vh;
+    }
+    .container {
+        .row {
+            .prefooter__column {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2vh;
+                h2 {
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 55px;
+                    line-height: 139%;
+                    letter-spacing: -0.02em;
+                    @include lt-md {
+                        font-size: 28px;
+                    }
+                }
+                p {
+                    color: var(--st-black);
+                    max-width: 600px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
