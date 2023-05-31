@@ -121,6 +121,7 @@
                                     vertical-align: 0.15em;
                                     transition: transform 0.2s ease-in-out;
                                     transform: rotate(0);
+                                    margin-left: 0.455em;
                                     @include lt-md {
                                         margin-right: 7px;
                                         color: var(--st-white);
