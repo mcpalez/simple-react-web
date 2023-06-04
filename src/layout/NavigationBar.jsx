@@ -64,7 +64,7 @@ function NavigationBar() {
 					<div className='menu-centered-desktop'>
 						<NavDropdown title="Services" id="basic-nav-dropdown">
 							<NavDropdown.Item href="#action/3.1">
-								<Link className='dropdown-link' to='/services/development' onClick={()=>{ collapseNav(); }}>Development services</Link>
+								<Link className='dropdown-link' to='/services/development-services' onClick={()=>{ collapseNav(); }}>Development services</Link>
 								<Link className='dropdown-link' to='/'>UX and UI services</Link>
 							</NavDropdown.Item>
 						</NavDropdown>
@@ -91,9 +91,8 @@ function NavigationBar() {
         </header>
         <Routes>
           	<Route path='/' element={<Home />}/>
-		  	<Route path='services' element={<Services />}>
-				<Route path='development-services' element={<Development />}></Route>
-			</Route>
+		  	<Route path='services' element={<Services />}></Route>
+			<Route path='services/development-services' element={<Development />}></Route>
         </Routes>
       </Router>
   )
