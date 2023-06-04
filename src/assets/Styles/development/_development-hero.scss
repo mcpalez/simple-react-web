@@ -2,15 +2,33 @@
     background: var(--st-main);
     .container {
         .row {
+            align-items: center;
             .col-hero__content {
+                display: flex;
+                flex-direction: column;
+                flex-flow: wrap;
+                gap: 3.5vh;
+                margin-bottom: 2.5vh;
+                @include lt-md {
+                    gap: 2vh;
+                }
+                h1 {
+                    margin: 0;
+                }
                 p {
                     max-width: 600px;
-                    @include lt-md {
-                        margin-bottom: 2.5vh;
-                    }
                 }
-                button {
-                    margin-top: 2vh;
+            }
+            .col-hero__wrapper {
+                text-align: right;
+                img {
+                    height: auto;
+                    max-width: 100%;
+                    border-radius: 13px;
+                    width: 100%;
+                    @include gt-md {
+                        max-width: 610px;
+                    }
                 }
             }
         }

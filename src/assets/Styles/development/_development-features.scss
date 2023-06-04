@@ -1,0 +1,38 @@
+.features__development {
+    .row-introduction-features {
+        .col-introduction {
+            text-align: center;
+            margin-top: 12vh;
+            margin-bottom: 7vh;
+            p {
+                color: var(--st-black);
+                max-width: 906px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+    .row-blocks-features {
+        padding-top: 6vh;
+        @include gt-md {
+            --bs-gutter-x: 6vh;
+        }
+        .col-blocks {
+            img {
+                height: auto;
+                max-width: 100%;
+                border-radius: 13px;
+                width: 100%;
+            }
+            .content {
+                margin-top: 4vh;
+                display: flex;
+                flex-direction: column;
+                gap: 2vh;
+                p {
+                    color: var(--st-black);
+                }
+            }
+        }
+    }
+}
