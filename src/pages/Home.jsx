@@ -9,7 +9,7 @@ const Home = () => {
 }
 
 const homeStyle = {
-    height: "2000px"
+    height: "3000px"
 }
 
 export default Home
