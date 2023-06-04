@@ -206,6 +206,11 @@
                                 color: var(--st-white); //changes for dropdown
                             }
                         }
+                        .button-item-navbar {
+                            @include lt-md {
+                                margin-top: 5vh;
+                            }
+                        }
                     }
                 }
                 .menu-right-desktop {
