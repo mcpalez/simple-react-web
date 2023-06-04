@@ -1,0 +1,48 @@
+.goals__development {
+    background: var(--st-main);
+    padding-top: 18vh;
+    padding-bottom: 24vh;
+    @include lt-md {
+        padding-top: 8vh;
+        padding-bottom: 6vh;
+    }
+    .container {
+        .row {
+            align-items: center;
+            @include lt-md {
+                flex-direction: column-reverse;
+                --bs-gutter-y: 3.5vh;
+            }
+            @include gt-md {
+                --bs-gutter-x: 6vh;
+            }
+            .col-goals-wrapper {
+                img {
+                    height: auto;
+                    max-width: 100%;
+                    border-radius: 13px;
+                    width: 100%;
+                }
+            }
+            .col-goals-content {
+                display: flex;
+                flex-direction: column;
+                gap: 2.4vh;
+                h2 {
+                    color: var(--st-white);
+                }
+                ul {
+                    max-width: 600px;
+                    li {
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 19px;
+                        line-height: 163%;
+                        letter-spacing: -0.01em;
+                        color: var(--st-white);
+                    }
+                }
+            }
+        }
+    }
+}

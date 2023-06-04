@@ -30,6 +30,22 @@ const Features = () => {
                     </div>
                 </Col>
             </Row>
+            <Row className='row-blocks-features'>
+                <Col md={6} className='col-blocks'>
+                    <img src={Frame46} alt="It's about brand service" />
+                    <div className="content">
+                        <h4 className='h4-default'>Our tech stack for front-end development and other technologies</h4>
+                        <p className='p-default'>Engaging and user-friendly interfaces to create responsive, accessible, and fast solutions.</p>
+                    </div>
+                </Col>
+                <Col md={6} className='col-blocks'>
+                    <img src={Frame46} alt="It's about brand service" />
+                    <div className="content">
+                        <h4 className='h4-default'>Website back-end development</h4>
+                        <p className='p-default'>Processing and storing data, performing calculations and logic operations, and communicating with the front-end to provide dynamic functionality and interactivity.</p>
+                    </div>
+                </Col>
+            </Row>
         </Container>
     </section>
   )

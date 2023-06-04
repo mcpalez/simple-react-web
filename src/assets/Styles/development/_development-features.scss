@@ -1,5 +1,8 @@
 .features__development {
     .row-introduction-features {
+        @include lt-md {
+            display: none;
+        }
         .col-introduction {
             text-align: center;
             margin-top: 12vh;
@@ -14,15 +17,28 @@
     }
     .row-blocks-features {
         padding-top: 6vh;
+        padding-bottom: 14vh;
         @include gt-md {
             --bs-gutter-x: 6vh;
         }
+        @include lt-md {
+            --bs-gutter-y: 6vh;
+            padding-bottom: 8vh;
+        }
         .col-blocks {
+            @include lt-md {
+                display: flex;
+                flex-direction: column-reverse;
+                gap: 2.4vh;
+            }
             img {
                 height: auto;
                 max-width: 100%;
                 border-radius: 13px;
                 width: 100%;
+                @include lt-md {
+                    height: 250px;
+                }
             }
             .content {
                 margin-top: 4vh;
