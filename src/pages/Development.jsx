@@ -7,10 +7,10 @@ import PreFooter from '../components/sections/prefooter/PreFooter';
 const Development = () => {
   return (
     <main className='app-main development__page'>
-		<Hero />
-		<Features />
-		<Goals />
-		<PreFooter />
+        <Hero />
+        <Features />
+        <Goals />
+        <PreFooter />
     </main>
   )
 }
