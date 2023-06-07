@@ -175,10 +175,9 @@
                                         &:hover {
                                             color: var(--st-link);
                                         }
-                                        &:first-child {
+                                        &:nth-child(1), &:nth-child(2) {
                                             padding-bottom: 15px;
                                         }
-
                                     }
                                 }
                             }

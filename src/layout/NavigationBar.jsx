@@ -64,9 +64,10 @@ function NavigationBar() {
 				<Nav>
 					<div className='menu-centered-desktop'>
 						<NavDropdown title="Services" id="basic-nav-dropdown">
-							<NavDropdown.Item href="#action/3.1">
+							<NavDropdown.Item>
 								<Link className='dropdown-link' to='/services/development-services' onClick={()=>{ collapseNav(); }}>Development services</Link>
 								<Link className='dropdown-link' to='/services/ux-ui-services'>UX and UI services</Link>
+								<Link className='dropdown-link' to='/services'>See all services</Link>
 							</NavDropdown.Item>
 						</NavDropdown>
 						<Link className='nav-item' href='/services/development'>About</Link>
