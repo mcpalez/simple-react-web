@@ -11,6 +11,7 @@ import { useState, useEffect, useRef } from 'react';
 import Home from '../pages/Home';
 import Development from '../pages/Development';
 import Services from '../pages/Services';
+import Uxui from '../pages/Uxui';
 
 function NavigationBar() {
 	const scrollDirection = useScrollDirection();
@@ -93,6 +94,8 @@ function NavigationBar() {
           	<Route path='/' element={<Home />}/>
 		  	<Route path='services' element={<Services />}></Route>
 			<Route path='services/development-services' element={<Development />}></Route>
+			<Route path='services/development-services' element={<Development />}></Route>
+			<Route path='services/ux-ui-services' element={<Uxui />}></Route>
         </Routes>
       </Router>
   )
