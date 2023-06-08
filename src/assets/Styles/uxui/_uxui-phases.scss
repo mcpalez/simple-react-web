@@ -1,0 +1,76 @@
+.uxui__phases {
+    padding-top: 12vh;
+    padding-bottom: 24vh;
+    @include lt-md {
+        padding-bottom: 8vh;
+    }
+    .container {
+        .phases--introduction-row {
+            .phases--introduction {
+                padding-bottom: 6vh;
+                display: flex;
+                flex-direction: column;
+                gap: 3vh;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                @include lt-md {
+                    text-align: left;
+                }
+                p {
+                    color: var(--st-black);
+                    max-width: 800px;
+                }
+            }
+        }
+        .phases--step-row {
+            padding-top: 6vh;
+            --bs-gutter-x: 6vh;
+            align-items: center;
+            @include lt-md {
+                --bs-gutter-x: 0;
+                --bs-gutter-y: 2vh;
+                flex-direction: column-reverse;
+            }
+            .phases--wrapper {
+                img {
+                    height: auto;
+                    max-width: 100%;
+                    border-radius: 13px;
+                    width: 100%;
+                }
+            }
+            .phases--content {
+                display: flex;
+                flex-direction: column;
+                gap: 2.4vh;
+                align-items: flex-start;
+                .number-badge {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 11px 20px;
+                    gap: 10px;
+                    width: 54px;
+                    height: 53px;
+                    background: rgba(25, 190, 132, 0.18);
+                    color: var(--st-green);
+                    border-radius: 13px;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 28px;
+                    line-height: 112%;
+                    letter-spacing: -0.02em;
+                    @include lt-md {
+                        font-size: 26px;
+                    }
+                }
+                p {
+                    color: var(--st-black);
+                    max-width: 622px;
+                }
+            }
+        }
+    }
+}
