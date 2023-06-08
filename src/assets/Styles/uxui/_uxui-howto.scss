@@ -1,0 +1,40 @@
+.uxui__howto {
+    background: var(--st-main);
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+    .container {
+        .row {
+            align-items: center;
+            --bs-gutter-x: 6vh;
+            @include lt-md {
+                --bs-gutter-x: 0;
+                --bs-gutter-y: 3vh;
+            }
+            .howto--content {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 2.4vh;
+                h3 {
+                    color: var(--st-white);
+                    max-width: 480px;
+                }
+                p {
+                    max-width: 622px;
+                }
+                button {
+                    color: var(--st-white);
+                    border-color: var(--st-white);
+                }
+            }
+            .howto--wrapper {
+                img {
+                    height: auto;
+                    max-width: 100%;
+                    border-radius: 13px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
