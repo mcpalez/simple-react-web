@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Frame46 from '../../../assets/images/development/Frame46.jpg';
+import ButtonOutlined from '../../buttons/button-outlined';
 
 const Features = () => {
   return (
@@ -36,6 +37,7 @@ const Features = () => {
                     <div className="content">
                         <h4 className='h4-default'>Our tech stack for front-end development and other technologies</h4>
                         <p className='p-default'>Engaging and user-friendly interfaces to create responsive, accessible, and fast solutions.</p>
+                        <ButtonOutlined>Full documentation stack</ButtonOutlined>
                     </div>
                 </Col>
                 <Col md={6} className='col-blocks'>
