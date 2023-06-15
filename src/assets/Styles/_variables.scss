@@ -1,5 +1,9 @@
 @import './_mixins.scss';
 
+body {
+    background: var(--st-main);
+}
+
 //Colors
     //$--st-main: #10312e;
     $--st-main: #10153E;

@@ -4,8 +4,9 @@
 @import './layout/footer.scss';
 @import './layout/navigationbar.scss';
 
-@import './prefooter/prefooter.scss';
+@import './global/prefooter/prefooter.scss';
 
+@import './pages/home/home.scss';
 @import './pages/services/services.scss';
 @import './pages/development/development.scss';
 @import './pages/uxui/uxui.scss'
