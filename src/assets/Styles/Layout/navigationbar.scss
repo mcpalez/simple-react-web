@@ -23,8 +23,8 @@
         padding-top: 19px !important;
         padding-bottom: 19px !important;
         @include lt-md {
-            padding-top: 10px !important;
-            padding-bottom: 10px !important;
+            padding-top: 8px !important;
+            padding-bottom: 5px !important;
         }
         .navbar-container {
             @include lt-md {
@@ -37,8 +37,8 @@
                     width: 133px;
                     height: 45px;
                     @include lt-md {
-                        width: 111px;
-                        height: 37px;
+                        width: 122px;
+                        height: 45px;
                     }
                 }
             }

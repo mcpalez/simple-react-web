@@ -2,7 +2,7 @@
 
 //Colors
     //$--st-main: #10312e;
-    $--st-main: #020202;
+    $--st-main: #10153E;
     $--st-black: #020202;
     $--st-white: #FFFFFF;
     $--st-gray-100: #FBFBFC;
@@ -97,6 +97,9 @@ p, .p-default {
     letter-spacing: -0.01em;
     color: var(--st-white);
     margin-bottom: 0;
+    @include lt-md {
+        font-size: 18px;
+    }
 }
 
 h1, .h1-default {
@@ -106,7 +109,7 @@ h1, .h1-default {
     letter-spacing: -0.015em;
     color: var(--st-white);
     margin-bottom: 20px;
-    @include lt-md {
+    @include lt-lg {
         font-size: 35px;
         line-height: 124%;
     }
@@ -119,7 +122,7 @@ h2, .h2-default {
     line-height: 139%;
     letter-spacing: -0.02em;
     margin-bottom: 0;
-    @include lt-md {
+    @include lt-lg {
         font-weight: 600;
         font-size: 28px;
         line-height: 120%;
@@ -133,7 +136,7 @@ h3, .h3-default {
     line-height: 139%;
     letter-spacing: -0.02em;
     margin-bottom: 0;
-    @include lt-md {
+    @include lt-lg {
         font-weight: 600;
         font-size: 23px;
     }
@@ -161,6 +164,15 @@ h5, .h5-default {
     font-weight: 500;
     font-size: 25px;
     line-height: 112%;
+    letter-spacing: -0.01em;
+    margin-bottom: 0;
+}
+
+h6, .h6-default {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 137,5%;
     letter-spacing: -0.01em;
     margin-bottom: 0;
 }
@@ -267,7 +279,7 @@ h5, .h5-default {
 
 
 
-//Desktop & Mobile hidings
+//Desktop & Mobile responsive hiding helpers
 
 @include gt-md {
     .desktop--hidden {
