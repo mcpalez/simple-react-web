@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link, BrowserRouter } from 'react-router-dom';
 import { ReactComponent as CrossMenuIcon } from '../assets/images/CrossMenuIcon.svg';
 import { ReactComponent as HamburgerMenuIcon } from '../assets/images/HamburgerMenuIcon.svg';
 import { ReactComponent as Logo } from '../assets/images/Logo.svg';
@@ -49,7 +49,7 @@ function NavigationBar() {
 	};
 
   return (
-      <Router>
+      <BrowserRouter>
         <header className={`app-header ${ scrollDirection === "down" ? "app-header--hide" : "app-header--show"}`}>
 			<Navbar expand="lg">
 			<Container className='navbar-container'>
@@ -67,15 +67,15 @@ function NavigationBar() {
 							<NavDropdown.Item>
 								<Link className='dropdown-link' to='/services/development-services'>Development services</Link>
 								<Link className='dropdown-link' to='/services/ux-ui-services'>UX and UI services</Link>
-								<Link className='dropdown-link' to='/services' onClick={()=>{ collapseNav(); }} preventScrollReset={true}>See all services</Link>
+								<Link className='dropdown-link' to='/services' onClick={()=>{ collapseNav(); }}>See all services</Link>
 							</NavDropdown.Item>
 						</NavDropdown>
-						<Link className='nav-item' href='/services/development'>About</Link>
-						<Link className='nav-item' onClick={()=>{ collapseNav(); }}>Work</Link>
-						<Link className='nav-item' onClick={()=>{ collapseNav(); }}>Insights</Link>
-						<Link className='nav-item' onClick={()=>{ collapseNav(); }}>How to start?</Link>
-						<Link to='/' className='nav-item' onClick={()=>{ collapseNav(); }}>Resources</Link>
-						<Link className='nav-item desktop--hidden' onClick={()=>{ collapseNav(); }}>Contact</Link>
+						<Link to='/' className='nav-item'>About</Link>
+						<Link to='/' className='nav-item'>Work</Link>
+						<Link to='/' className='nav-item'>Insights</Link>
+						<Link to='/' className='nav-item'>How to start?</Link>
+						<Link to='/' className='nav-item'>Resources</Link>
+						<Link className='nav-item desktop--hidden'>Contact</Link>
 						<Link className='nav-item button-item-navbar desktop--hidden' onClick={()=>{ collapseNav(); }}>
 							<button className='button-primary-filled__navbar'>Start a project</button>
 						</Link>
@@ -98,7 +98,7 @@ function NavigationBar() {
 			<Route path='services/development-services' element={<Development />}/>
 			<Route path='services/ux-ui-services' element={<Uxui />}/>
         </Routes>
-      </Router>
+      </BrowserRouter>
   )
 }
 
