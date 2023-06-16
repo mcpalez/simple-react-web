@@ -157,6 +157,10 @@
                                     @include lt-md {
                                         padding: 0;
                                         color: var(--st-white);
+                                        &:hover{
+                                            background: var(--st-main);
+                                            border-radius: 13px;
+                                        }
                                     }
                                     &:hover{
                                         background: var(--st-white);

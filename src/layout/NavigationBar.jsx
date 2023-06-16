@@ -38,7 +38,7 @@ function NavigationBar() {
 	const [isActive, setIsActive] = useState(false);
 	const handleClick = () => {
 		setIsActive(current => !current);
-		document.body.classList.toggle('mobile-menu-open');
+		//document.body.classList.toggle('mobile-menu-open');
 	};
 
 	const navButton = useRef(null);
@@ -65,8 +65,8 @@ function NavigationBar() {
 					<div className='menu-centered-desktop'>
 						<NavDropdown title="Services" id="basic-nav-dropdown">
 							<NavDropdown.Item>
-								<Link className='dropdown-link' to='/services/development-services' onClick={()=>{ collapseNav(); }} preventScrollReset={true}>Development services</Link>
-								<Link className='dropdown-link' to='/services/ux-ui-services' onClick={()=>{ collapseNav(); }} preventScrollReset={true}>UX and UI services</Link>
+								<Link className='dropdown-link' to='/services/development-services'>Development services</Link>
+								<Link className='dropdown-link' to='/services/ux-ui-services'>UX and UI services</Link>
 								<Link className='dropdown-link' to='/services' onClick={()=>{ collapseNav(); }} preventScrollReset={true}>See all services</Link>
 							</NavDropdown.Item>
 						</NavDropdown>
@@ -93,10 +93,10 @@ function NavigationBar() {
         </header>
         <Routes>
           	<Route path='/' element={<Home />}/>
-		  	<Route path='services' element={<Services />}></Route>
-			<Route path='services/development-services' element={<Development />}></Route>
-			<Route path='services/development-services' element={<Development />}></Route>
-			<Route path='services/ux-ui-services' element={<Uxui />}></Route>
+		  	<Route path='services' element={<Services />}/>
+			<Route path='services/development-services' element={<Development />}/>
+			<Route path='services/development-services' element={<Development />}/>
+			<Route path='services/ux-ui-services' element={<Uxui />}/>
         </Routes>
       </Router>
   )
