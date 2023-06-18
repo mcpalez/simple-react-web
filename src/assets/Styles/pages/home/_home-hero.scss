@@ -26,10 +26,6 @@
                         border-color: var(--st-white);
                         color: var(--st-white);
                     }
-                    @include lt-md {
-                        flex-direction: column;
-                        flex: auto;
-                    }
                 }
             }
             .col-hero__wrapper {

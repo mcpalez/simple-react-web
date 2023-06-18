@@ -15,8 +15,8 @@ function Hero() {
                     <h1 className='h1-default'>Outstanding digital&nbsp;experience’s</h1>
                     <p className='p-default'>We creates and builds quick web apps, online websites, and mobile applications. Let’s get started and work together!</p>
                     <div className="button-container">
-                        <ButtonFilled>Start your project</ButtonFilled>
-                        <ButtonOutlined>See our services</ButtonOutlined>
+                        <ButtonFilled>Get started</ButtonFilled>
+                        <ButtonOutlined>Our services</ButtonOutlined>
                     </div>
                 </Col>
                 <Col md={6} className='col-hero__wrapper'>
