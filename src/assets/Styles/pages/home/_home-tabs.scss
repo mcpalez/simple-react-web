@@ -25,6 +25,9 @@
         .row {
             .col-tabs__content {
                 .row {
+                    @include lt-md {
+                        gap: 3vh;
+                    }
                     .tab__indicator {
                         .nav {
                             gap: 1vh;
@@ -56,7 +59,7 @@
                                         border-bottom: 2px solid var(--st-gray-200);
                                         border-radius: 0;
                                         background: none;
-                                        padding: 1.6vh 0;
+                                        padding: 1.4vh 0;
                                     }
                                     svg {
                                         margin-right: 2vh;
@@ -67,7 +70,7 @@
                                         color: var(--st-black);
                                         @include lt-md {
                                             border: none;
-                                            border-bottom: 2px solid var(--st-gray-200);
+                                            border-bottom: 2px solid var(--st-indigo);
                                         }
                                         svg {
                                             margin-right: 2vh;

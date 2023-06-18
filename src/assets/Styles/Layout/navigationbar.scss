@@ -43,6 +43,7 @@
                 }
             }
             .navbar-toggler {
+                border-radius: 0;
                 @include lt-md {
                     z-index: 5;
                     border: none !important;
