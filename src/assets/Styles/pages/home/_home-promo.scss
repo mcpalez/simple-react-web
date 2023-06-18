@@ -1,0 +1,19 @@
+.promo__home {
+    background: var(--st-main);
+    .container {
+        .row {
+            .promo-col__content {
+                .swiper {
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            padding: 5vh 0;
+                            h4 {
+                                color: var(--st-white);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

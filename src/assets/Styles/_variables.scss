@@ -241,11 +241,11 @@ h6, .h6-default {
     color: var(--st-main);
     border-radius: 1.3vh;
     border: none;
+    &:hover {
+        background: var(--st-green-dark);
+    }
     a { text-decoration: none; 
-        color: var(--st-white); 
-        &:hover { 
-            color: var(--st-white); 
-        }
+        color: var(--st-main); 
     }
 }
 
@@ -262,9 +262,6 @@ h6, .h6-default {
     text-decoration: none;
     a { text-decoration: none; 
         color: var(--st-black); 
-        &:hover { 
-            color: var(--st-black); 
-        }
     } 
 }
 

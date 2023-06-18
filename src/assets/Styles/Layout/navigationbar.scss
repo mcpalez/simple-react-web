@@ -189,12 +189,15 @@
                         .nav-item {
                             font-style: normal;
                             font-weight: 400;
-                            font-size: 17px;
+                            font-size: 18px;
                             line-height: 156.02%;
                             letter-spacing: -0.01em;
                             color: var(--st-white);
                             padding: 0 17px;
                             text-decoration: none;
+                            @include lt-xl {
+                                font-size: 17px;
+                            }
                             @include lt-lg {
                                 font-size: 14px;
                             }

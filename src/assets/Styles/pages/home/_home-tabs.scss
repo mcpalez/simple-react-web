@@ -48,7 +48,7 @@
                                     padding: 1.6vh 4.5vh 1.6vh 1.6vh;
                                     color: var(--st-gray-400);
                                     background: var(--st-gray-100);
-                                    border: 1px solid var(--st-gray-100);
+                                    border: 2px solid var(--st-gray-100);
                                     border-radius: 13px;
                                     @include lt-xl {
                                         font-size: 21px;
@@ -66,7 +66,7 @@
                                     }
                                     &[aria-selected="true"] {
                                         background: none;
-                                        border: 1px solid var(--st-black);
+                                        border: 2px solid var(--st-indigo);
                                         color: var(--st-black);
                                         @include lt-md {
                                             border: none;
