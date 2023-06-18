@@ -6,8 +6,7 @@ body {
 }
 
 //Colors
-    //$--st-main: #10312e;
-    $--st-main: #10153E;
+    $--st-main: #1B2934;
     $--st-black: #020202;
     $--st-white: #FFFFFF;
     $--st-gray-100: #FBFBFC;
@@ -29,6 +28,8 @@ body {
     $--st-orange-shade: #FAE5DE;
     $--st-ember: #FF3C00;
     $--st-green: #19BE84;
+    $--st-green-100: #0FD354;
+    $--st-green-dark: #11af49;
     
 :root {
     --st-main: #{$--st-main};
@@ -53,6 +54,8 @@ body {
     --st-orange-shade: #{$--st-orange-shade};
     --st-ember: #{$--st-ember};
     --st-green: #{$--st-green};
+    --st-green-100: #{$--st-green-100};
+    --st-green-dark: #{$--st-green-dark};
 }
 
 
@@ -197,8 +200,8 @@ h6, .h6-default {
 
 //Buttons
 .button-primary-filled__navbar {
-    background: var(--st-blue-100);
-    color: var(--st-white);
+    background: var(--st-green-100);
+    color: var(--st-main);
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -210,7 +213,7 @@ h6, .h6-default {
     order: 1;
     flex-grow: 0;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 17px;
     line-height: 21px;
     display: flex;
@@ -230,12 +233,12 @@ h6, .h6-default {
     padding: 14px 29px;
     gap: 10px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 18px;
     line-height: 22px;
     letter-spacing: -0.01em;
-    background: var(--st-blue-100);
-    color: var(--st-white);
+    background: var(--st-green-100);
+    color: var(--st-main);
     border-radius: 1.3vh;
     border: none;
     a { text-decoration: none; 
