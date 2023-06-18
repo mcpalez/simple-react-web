@@ -1,15 +1,63 @@
 .promo__home {
     background: var(--st-main);
+    padding-top: 8vh;
+    padding-bottom: 6vh;
     .container {
         .row {
             .promo-col__content {
                 .swiper {
+                    cursor: pointer;
                     .swiper-wrapper {
                         .swiper-slide {
                             padding: 5vh 0;
-                            h4 {
-                                color: var(--st-white);
+                            display: flex;
+                            flex-direction: column;
+                            @include lt-md {
+                                gap: 3.5vh;
                             }
+                            img {
+                                height: auto;
+                                max-width: 100%;
+                                border-radius: 13px;
+                                width: 100%;
+                                margin-bottom: 4vh;
+                                @include lt-md {
+                                    min-height: 18vh;
+                                }
+                            }
+                            h4 {
+                                @include lt-md {
+                                    font-size: 28px;
+                                }
+                            }
+                            .slide-content {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 2vh;
+                                @include lt-md {
+                                    order: -1;
+                                    gap: 1vh;
+                                }
+                                h4 {
+                                    color: var(--st-white);
+                                }
+                            }
+                        }
+                    }
+                    .swiper-pagination {
+                        bottom: 0;
+                        top: unset;
+                    }
+                    .swiper-pagination-progressbar {
+                        background: var(--st-gray-100);
+                        min-height: 1.5vh;
+                        border-radius: 0.5vh;
+                        @include lt-md {
+                            min-height: 1.5vh;
+                        }
+                        span {
+                            border-radius: 0.5vh;
+                            background: var(--st-indigo);
                         }
                     }
                 }
