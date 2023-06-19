@@ -62,18 +62,23 @@
                                         padding: 1.4vh 0;
                                     }
                                     svg {
-                                        margin-right: 2vh;
+                                        margin-right: 1.6vh;
+                                        @include lt-md {
+                                            height: 44px;
+                                            width: 44px;
+                                        }
                                     }
                                     &[aria-selected="true"] {
-                                        background: none;
-                                        border: 2px solid var(--st-indigo);
+                                        background: var(--st-light-purple-100);
+                                        border: 2px solid var(--st-light-purple-100);
                                         color: var(--st-black);
                                         @include lt-md {
+                                            background: none;
                                             border: none;
                                             border-bottom: 2px solid var(--st-indigo);
                                         }
                                         svg {
-                                            margin-right: 2vh;
+                                            margin-right: 1.6vh;
                                             rect {
                                                 fill: var(--st-indigo);
                                             }
