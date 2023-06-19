@@ -221,6 +221,9 @@ h6, .h6-default {
     display: flex;
     align-items: center;
     letter-spacing: -0.01em;
+    &:hover {
+        background: var(--st-green-dark);
+    }
     @include lt-lg {
         font-size: 15px;
     }
@@ -262,6 +265,9 @@ h6, .h6-default {
     font-size: 18px;
     line-height: 22px;
     text-decoration: none;
+    &:hover {
+        opacity: 0.6;
+    }
     a { text-decoration: none; 
         color: var(--st-black); 
     } 
