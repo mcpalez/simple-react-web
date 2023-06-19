@@ -28,14 +28,43 @@
                 }
             }
             .col-choose__img-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
                 img {
                     height: auto;
                     max-width: 100%;
                     border-radius: 13px;
                     width: 100%;
-                    margin-bottom: 4vh;
                     @include lt-md {
                         min-height: 18vh;
+                    }
+                }
+                .play-button {
+                    position: absolute;
+                    background: hsla(0, 0%, 85%, 0.1);
+                    border: none;
+                    border-radius: 100%;
+                    width: 9.2vh;
+                    height: 9.2vh;
+                    @include lt-md {
+                        width: 5.5vh;
+                        height: 5.5vh;
+                    }
+                    svg {
+                        width: 3.9vh;
+                        height: 4.7vh;
+                        border-radius: 0.3vh;
+                        margin-left: 10px;
+                        @include lt-md {
+                            width: 1.9vh;
+                            height: 2.3vh;
+                            margin-left: 4px;
+                        }
+                        path {
+                            fill: var(--st-orange);
+                        }
                     }
                 }
             }

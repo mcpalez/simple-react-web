@@ -28,6 +28,7 @@ body {
     $--st-pink: #FD3B79;
     $--st-yellow: #FEC83B;
     $--st-orange-shade: #FAE5DE;
+    $--st-orange: #FF7752;
     $--st-ember: #FF3C00;
     $--st-green: #19BE84;
     $--st-green-100: #0FD354;
@@ -56,6 +57,7 @@ body {
     --st-pink: #{$--st-pink};
     --st-yellow: #{$--st-yellow};
     --st-orange-shade: #{$--st-orange-shade};
+    --st-orange: #{$--st-orange};
     --st-ember: #{$--st-ember};
     --st-green: #{$--st-green};
     --st-green-100: #{$--st-green-100};
@@ -285,6 +287,25 @@ h6, .h6-default {
     letter-spacing: -0.01em;
     text-decoration-line: underline;
     color: var(--st-link);
+}
+
+.play-button {
+    position: absolute;
+    background: rgba(217, 217, 217, 0.1);
+    backdrop-filter: blur(25px);
+    border: none;
+    border-radius: 100%;
+    width: 9.2vh;
+    height: 9.2vh;
+    @include lt-md {
+        width: 5.5vh;
+        height: 5.5vh;
+    }
+    svg {
+        path {
+            fill: var(--st-black);
+        }
+    }
 }
 
 

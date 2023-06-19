@@ -12,6 +12,7 @@ import Home from '../pages/Home';
 import Development from '../pages/Development';
 import Services from '../pages/Services';
 import Uxui from '../pages/Uxui';
+import '../helpers/navHelper';
 
 function NavigationBar() {
 	const scrollDirection = useScrollDirection();
@@ -41,42 +42,42 @@ function NavigationBar() {
 		//document.body.classList.toggle('mobile-menu-open');
 	};
 
-	const navButton = useRef(null);
-	const linksContainerRef = useRef(null);
-	function collapseNav() {
-		navButton.current.classList.add("collapsed");
-		linksContainerRef.current.classList.remove("show");
-	};
+	// const navButton = useRef(null);
+	// const linksContainerRef = useRef(null);
+	// function collapseNav() {
+	// 	navButton.current.classList.add("collapsed");
+	// 	linksContainerRef.current.classList.remove("show");
+	// };
 
   return (
       <BrowserRouter>
         <header className={`app-header ${ scrollDirection === "down" ? "app-header--hide" : "app-header--show"}`}>
 			<Navbar expand="lg">
 			<Container className='navbar-container'>
-				<Navbar.Brand href="/" className='logo-navbar' onClick={collapseNav}>
+				<Navbar.Brand href="/" className='logo-navbar'>
 					<Logo />
 				</Navbar.Brand>
-				<Navbar.Toggle aria-controls="basic-navbar-nav" className={isActive ? 'active-hamburger' : ''} onClick={handleClick} ref={navButton}>
-					<HamburgerMenuIcon className={isActive ? 'hidden-hamburger-menu' : 'shown-hamburger-menu'}/>
-					<CrossMenuIcon className={isActive ? 'shown-cross-menu' : 'hidden-cross-menu'}/>
+				<Navbar.Toggle aria-controls="basic-navbar-nav" className={isActive ? 'active-hamburger' : ''} onClick={preventScroll}>
+					<HamburgerMenuIcon id='hamburger-menu-09332' className={isActive ? 'hidden-hamburger-menu' : 'shown-hamburger-menu'}/>
+					<CrossMenuIcon id='cross-menu-09333' className={isActive ? 'shown-cross-menu' : 'hidden-cross-menu'}/>
 				</Navbar.Toggle>
-				<Navbar.Collapse id="basic-navbar-nav" ref={linksContainerRef}>
+				<Navbar.Collapse id="basic-navbar-nav">
 				<Nav>
 					<div className='menu-centered-desktop'>
 						<NavDropdown title="Services" id="basic-nav-dropdown">
 							<NavDropdown.Item>
 								<Link className='dropdown-link' to='/services/development-services'>Development services</Link>
 								<Link className='dropdown-link' to='/services/ux-ui-services'>UX and UI services</Link>
-								<Link className='dropdown-link' to='/services' onClick={()=>{ collapseNav(); }}>See all services</Link>
+								<Link className='dropdown-link' to='/services'>See all services</Link>
 							</NavDropdown.Item>
 						</NavDropdown>
-						<Link to='/' className='nav-item'>About</Link>
+						<Link to='/' className='nav-item' onClick={collapsingMenu}>About</Link>
 						<Link to='/' className='nav-item'>Work</Link>
 						<Link to='/' className='nav-item'>Insights</Link>
 						<Link to='/' className='nav-item'>How to start?</Link>
 						<Link to='/' className='nav-item'>Resources</Link>
 						<Link className='nav-item desktop--hidden'>Contact</Link>
-						<Link className='nav-item button-item-navbar desktop--hidden' onClick={()=>{ collapseNav(); }}>
+						<Link className='nav-item button-item-navbar desktop--hidden'>
 							<button className='button-primary-filled__navbar'>Start a project</button>
 						</Link>
 					</div>
@@ -100,6 +101,23 @@ function NavigationBar() {
         </Routes>
       </BrowserRouter>
   )
+}
+
+export function preventScroll(myElement, show) {
+    const element = document.getElementById("basic-navbar-nav");
+    const body = document.body;
+
+    if (!element.classList.contains("show")) {
+        body.classList.add("mobile-menu-open");
+    } else {
+        body.classList.remove("mobile-menu-open")
+    }
+}
+
+export function collapsingMenu() {
+    const elementTrigger = document.getElementById("basic-navbar-nav");
+    elementTrigger.classList.remove("show");
+	document.body.classList.remove("mobile-menu-open");
 }
 
 export default NavigationBar
