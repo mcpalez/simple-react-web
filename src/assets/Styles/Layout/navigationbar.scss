@@ -108,11 +108,13 @@
                             //         pointer-events: none;
                             //     }
                             // }
+
                             .dropdown-toggle {
                                 padding: 0;
                                 padding-left: 0 !important;
                                 padding-right: 0 !important;
                                 margin-bottom: 4px;
+                                color: var(--st-white);
                                 @include lt-md {
                                     margin-bottom: 0;
                                 }
@@ -137,6 +139,16 @@
                                     margin-left: 0.455em;
                                     @include lt-md {
                                         transform: rotate(0deg);
+                                    }
+                                }
+                                &[aria-expanded="true"], &:hover {
+                                    color: var(--st-link);
+                                    &::after {
+                                        content: url('../../images/DropdownIconActive.svg');
+                                        transition: all 0.2s ease-in-out;
+                                        @include lt-md {
+                                            content: url('../../images/DropdownIconMobileActive.svg');
+                                        }
                                     }
                                 }
                             }
@@ -195,6 +207,9 @@
                             color: var(--st-white);
                             padding: 0 17px;
                             text-decoration: none;
+                            &:hover {
+                                color: var(--st-link);
+                            }
                             @include lt-xl {
                                 font-size: 17px;
                             }
@@ -207,9 +222,6 @@
                                 line-height: 163%;
                                 font-weight: 500;
                                 padding: 13px 0;
-                            }
-                            a {
-                                color: var(--st-white); //changes for dropdown
                             }
                         }
                         .button-item-navbar {
@@ -226,12 +238,18 @@
                     .nav-item {
                         font-style: normal;
                         font-weight: 400;
-                        font-size: 17px;
+                        font-size: 18px;
                         line-height: 156.02%;
                         letter-spacing: -0.01em;
                         color: var(--st-white);
                         padding: 0 17px;
                         text-decoration: none;
+                        &:hover {
+                            color: var(--st-link);
+                        }
+                        @include lt-xl {
+                            font-size: 17px;
+                        }
                         @include lt-lg {
                             font-size: 14px;
                         }

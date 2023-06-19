@@ -13,6 +13,7 @@ body {
     $--st-gray-200: #E8E8E8;
     $--st-gray-300: #DEDEDE;
     $--st-gray-400: #ABABAB;
+    $--st-gray-dark: #353535;
     $--st-light-blue: #EBFBFF;
     $--st-powder-blue: #CCD6FF;
     $--st-blue: #00A3FF;
@@ -40,6 +41,7 @@ body {
     --st-gray-200: #{$--st-gray-200};
     --st-gray-300: #{$--st-gray-300};
     --st-gray-400: #{$--st-gray-400};
+    --st-gray-dark: #{$--st-gray-dark};
     --st-light-blue: #{$--st-light-blue};
     --st-powder-blue: #{$--st-powder-blue};
     --st-blue: #{$--st-blue};
