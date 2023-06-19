@@ -1,9 +1,9 @@
 import React from 'react';
-import Hero from '../components/sections/uxui/Hero';
-import Howto from '../components/sections/uxui/Howto';
-import Inference from '../components/sections/uxui/Inference';
-import Phases from '../components/sections/uxui/Phases';
-import PreFooter from '../components/sections/prefooter/PreFooter';
+import Hero from '../components/pages/uxui/Hero';
+import Howto from '../components/pages/uxui/Howto';
+import Inference from '../components/pages/uxui/Inference';
+import Phases from '../components/pages/uxui/Phases';
+import PreFooter from '../components/cta/ctaBottom';
 
 function Uxui() {
     return (

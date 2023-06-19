@@ -1,7 +1,7 @@
 import React from 'react';
-import Hero from '../components/sections/home/Hero';
-import Tabs from '../components/sections/home/Tabs';
-import Promo from '../components/sections/home/Promo';
+import Hero from '../components/pages/home/Hero';
+import Tabs from '../components/pages/home/Tabs';
+import Promo from '../components/pages/home/Promo';
 
 
 const Home = () => {

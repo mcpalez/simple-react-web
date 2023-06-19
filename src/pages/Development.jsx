@@ -1,8 +1,8 @@
 import React from 'react';
-import Features from '../components/sections/development/Features';
-import Hero from '../components/sections/development/Hero';
-import Goals from '../components/sections/development/Goals';
-import PreFooter from '../components/sections/prefooter/PreFooter';
+import Features from '../components/pages/development/Features';
+import Hero from '../components/pages/development/Hero';
+import Goals from '../components/pages/development/Goals';
+import PreFooter from '../components/cta/ctaBottom';
 
 const Development = () => {
   return (

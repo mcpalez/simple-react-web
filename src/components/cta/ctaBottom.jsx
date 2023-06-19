@@ -2,7 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import ButtonFilled from '../../buttons/button-filled';
+import ButtonFilled from '../buttons/button-filled';
 
 const PreFooter = () => {
   return (

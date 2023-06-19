@@ -1,9 +1,9 @@
 import React from 'react';
-import Hero from '../components/sections/services/Hero';
-import WeDo from '../components/sections/services/WeDo';
-import Offer from '../components/sections/services/Offer'
-import Capabilities from '../components/sections/services/Capabilities';
-import PreFooter from '../components/sections/prefooter/PreFooter';
+import Hero from '../components/pages/services/Hero';
+import WeDo from '../components/pages/services/WeDo';
+import Offer from '../components/pages/services/Offer'
+import Capabilities from '../components/pages/services/Capabilities';
+import PreFooter from '../components/cta/ctaBottom';
 
 
 const Services = () => {
