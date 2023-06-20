@@ -1,18 +1,15 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Routes, Route, Link, BrowserRouter } from 'react-router-dom';
 import { ReactComponent as CrossMenuIcon } from '../assets/images/CrossMenuIcon.svg';
 import { ReactComponent as HamburgerMenuIcon } from '../assets/images/HamburgerMenuIcon.svg';
 import { ReactComponent as Logo } from '../assets/images/Logo.svg';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import Home from '../pages/Home';
 import Development from '../pages/Development';
 import Services from '../pages/Services';
 import Uxui from '../pages/Uxui';
-import '../helpers/navHelper';
 
 function NavigationBar() {
 	const scrollDirection = useScrollDirection();
@@ -36,66 +33,77 @@ function NavigationBar() {
 			return scrollDirection;
 	};
 
-	const [isActive, setIsActive] = useState(false);
-	const handleClick = () => {
-		setIsActive(current => !current);
-		//document.body.classList.toggle('mobile-menu-open');
-	};
-
-	// const navButton = useRef(null);
-	// const linksContainerRef = useRef(null);
-	// function collapseNav() {
-	// 	navButton.current.classList.add("collapsed");
-	// 	linksContainerRef.current.classList.remove("show");
-	// };
-
   return (
       <BrowserRouter>
         <header className={`app-header ${ scrollDirection === "down" ? "app-header--hide" : "app-header--show"}`}>
-			<Navbar expand="lg">
-			<Container className='navbar-container'>
-				<Navbar.Brand href="/" className='logo-navbar'>
-					<Logo />
-				</Navbar.Brand>
-				<Navbar.Toggle aria-controls="basic-navbar-nav" className={isActive ? 'active-hamburger' : ''} onClick={preventScroll}>
-					<HamburgerMenuIcon id='hamburger-menu-09332' className={isActive ? 'hidden-hamburger-menu' : 'shown-hamburger-menu'}/>
-					<CrossMenuIcon id='cross-menu-09333' className={isActive ? 'shown-cross-menu' : 'hidden-cross-menu'}/>
-				</Navbar.Toggle>
-				<Navbar.Collapse id="basic-navbar-nav">
-				<Nav>
-					<div className='menu-centered-desktop'>
-						<NavDropdown title="Services" id="basic-nav-dropdown">
-							<NavDropdown.Item>
-								<Link className='dropdown-link' to='/services/development-services'>Development services</Link>
-								<Link className='dropdown-link' to='/services/ux-ui-services'>UX and UI services</Link>
-								<Link className='dropdown-link' to='/services'>See all services</Link>
-							</NavDropdown.Item>
-						</NavDropdown>
-						<Link to='/' className='nav-item' onClick={collapsingMenu}>About</Link>
-						<Link to='/' className='nav-item'>Work</Link>
-						<Link to='/' className='nav-item'>Insights</Link>
-						<Link to='/' className='nav-item'>How to start?</Link>
-						<Link to='/' className='nav-item'>Resources</Link>
-						<Link className='nav-item desktop--hidden'>Contact</Link>
-						<Link className='nav-item button-item-navbar desktop--hidden'>
-							<button className='button-primary-filled__navbar'>Start a project</button>
-						</Link>
+			<Container>
+				<nav className='navigation navbar--mini'>
+					<a href='/'><Logo/></a>
+					<div className="menu">
+						<div className='list'>
+							<NavDropdown title="Services" id="basic-nav-dropdown">
+								<NavDropdown.Item>
+									<Link className='dropdown-link' to='/services/development-services'>Development services</Link>
+									<Link className='dropdown-link' to='/services/ux-ui-services'>UX and UI services</Link>
+									<Link className='dropdown-link' to='/services'>See all services</Link>
+								</NavDropdown.Item>
+							</NavDropdown>
+							<Link to='/' className='nav-item'>About</Link>
+							<Link to='/' className='nav-item'>Work</Link>
+							<Link to='/' className='nav-item'>How to start?</Link>
+							<Link to='/' className='nav-item'>Resources</Link>
+						</div>
+						<button className='burger-wrap' onClick={openingMenu}>
+							<HamburgerMenuIcon/>
+						</button>
 					</div>
-				</Nav>
-				<div className='menu-right-desktop mobile--hidden'>
-					<Link className='nav-item only-on--desktop' to='/'>Contact us</Link>
-					<Link className='nav-item button-item-navbar' to='/'>
+					<div className="list-side">
+						<Link to='/' className='nav-item'>Contact us</Link>
 						<button className='button-primary-filled__navbar'>Start a project</button>
-					</Link>
-				</div>
-				</Navbar.Collapse>
+					</div>
+				</nav>
+				<nav className='navigation navbar--wrapper' id='navbar--list'>
+					<div className="menu">
+						<div className="front">
+							<a href='/'><Logo/></a>
+							<button className='close-wrap' onClick={closingMenu}>
+								<CrossMenuIcon/>
+							</button>
+						</div>
+						<ul className='list'>
+							<NavDropdown title="Services" id="basic-nav-dropdown">
+								<NavDropdown.Item>
+									<Link className='dropdown-link' to='/services/development-services'>Development services</Link>
+									<Link className='dropdown-link' to='/services/ux-ui-services'>UX and UI services</Link>
+									<Link className='dropdown-link' to='/services'>See all services</Link>
+								</NavDropdown.Item>
+							</NavDropdown>
+							<li className="list-item">
+								<Link to='/' className='nav-item'>About</Link>
+							</li>
+							<li className="list-item">
+								<Link to='/' className='nav-item'>Work</Link>
+							</li>
+							<li className="list-item">
+								<Link to='/' className='nav-item'>How to start?</Link>
+							</li>
+							<li className="list-item">
+								<Link to='/' className='nav-item'>Resources</Link>
+							</li>
+							<li className="list-item">
+								<Link to='/' className='nav-item'>Contact</Link>
+							</li>
+							<li className="list-item">
+								<button className='button-primary-filled__navbar'>Start a project</button>
+							</li>
+						</ul>
+					</div>
+				</nav>
 			</Container>
-			</Navbar>
         </header>
         <Routes>
           	<Route path='/' element={<Home />}/>
 		  	<Route path='services' element={<Services />}/>
-			<Route path='services/development-services' element={<Development />}/>
 			<Route path='services/development-services' element={<Development />}/>
 			<Route path='services/ux-ui-services' element={<Uxui />}/>
         </Routes>
@@ -103,21 +111,16 @@ function NavigationBar() {
   )
 }
 
-export function preventScroll(myElement, show) {
-    const element = document.getElementById("basic-navbar-nav");
-    const body = document.body;
-
-    if (!element.classList.contains("show")) {
-        body.classList.add("mobile-menu-open");
-    } else {
-        body.classList.remove("mobile-menu-open")
-    }
-}
-
-export function collapsingMenu() {
-    const elementTrigger = document.getElementById("basic-navbar-nav");
-    elementTrigger.classList.remove("show");
-	document.body.classList.remove("mobile-menu-open");
-}
-
 export default NavigationBar
+
+function openingMenu() {
+	const referenceElement = document.getElementById('navbar--list');
+	referenceElement.classList.add('navbar--opened');
+	document.body.classList.add('mobile-menu-open');
+}
+
+function closingMenu() {
+	const referenceElement = document.getElementById('navbar--list');
+	referenceElement.classList.remove('navbar--opened');
+	document.body.classList.remove('mobile-menu-open');
+}
