@@ -183,32 +183,21 @@
                 padding-inline: 20px;
                 display: flex;
                 flex-direction: column;
-                gap: 30px;
+                gap: 35px;
                 li {
                     a {
                         font-style: normal;
-                        font-weight: 400;
-                        font-size: 18px;
-                        line-height: 156.02%;
+                        font-weight: 500;
+                        font-size: 21px;
+                        line-height: 163%;
                         letter-spacing: -0.01em;
                         color: var(--st-white);
-                        padding: 0 17px;
+                        padding: 0;
                         text-decoration: none;
+                        width: 100%;
+                        display: block;
                         &:hover {
                             color: var(--st-link);
-                        }
-                        @include lt-xl {
-                            font-size: 17px;
-                        }
-                        @include lt-lg {
-                            font-size: 14px;
-                        }
-                        @include lt-md {
-                            font-style: normal;
-                            font-size: 21px;
-                            line-height: 163%;
-                            font-weight: 500;
-                            padding: 13px 0;
                         }
                     }
                 }
@@ -218,15 +207,12 @@
                     padding: 0;
                     padding-left: 0 !important;
                     padding-right: 0 !important;
-                    margin-bottom: 4px;
+                    margin-bottom: 0;
                     color: var(--st-white);
                     font-style: normal;
                     font-size: 21px;
                     line-height: 163%;
                     font-weight: 500;
-                    @include lt-md {
-                        margin-bottom: 0;
-                    }
                     &::after {
                         border: 0;
                         vertical-align: 0.15em;
