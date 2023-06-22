@@ -41,12 +41,6 @@ function NavigationBar() {
 					<a href='/'><Logo/></a>
 					<div className='menu'>
 						<div className='list'>
-							{/*<div className='list-dropdown--trigger'>Services</div>
-							<div className='list-dropdown' id='dropdown-list-menu'>
-								<Link className='dropdown-link' to='/services/development-services'>Development services</Link>
-								<Link className='dropdown-link' to='/services/ux-ui-services'>UX and UI services</Link>
-								<Link className='dropdown-link' to='/services'>See all services</Link>
-							</div>*/}
 							<NavDropdown title="Services" id="basic-nav-dropdown">
 								<NavDropdown.Item>
 									<Link className='dropdown-link' to='/services/development-services'>Development services</Link>
@@ -79,17 +73,17 @@ function NavigationBar() {
 						<ul className='list'>
 							<NavDropdown title="Services" id="basic-nav-dropdown">
 								<NavDropdown.Item>
-									<Link className='dropdown-link' to='/services/development-services'>Development services</Link>
-									<Link className='dropdown-link' to='/services/ux-ui-services'>UX and UI services</Link>
-									<Link className='dropdown-link' to='/services'>See all services</Link>
+									<Link className='dropdown-link' to='/services/development-services' onClick={collapsePageChange}>Development services</Link>
+									<Link className='dropdown-link' to='/services/ux-ui-services' onClick={collapsePageChange}>UX and UI services</Link>
+									<Link className='dropdown-link' to='/services' onClick={collapsePageChange}>See all services</Link>
 								</NavDropdown.Item>
 							</NavDropdown>
-							<li className="list-item"><Link to='/' className='nav-item'>About</Link></li>
-							<li className="list-item"><Link to='/' className='nav-item'>Work</Link></li>
-							<li className="list-item"><Link to='/' className='nav-item'>How to start?</Link></li>
-							<li className="list-item"><Link to='/' className='nav-item'>Resources</Link></li>
-							<li className="list-item"><Link to='/' className='nav-item'>Contact</Link></li>
-							<li className="list-item"><button className='button-primary-filled__navbar'>Start a project</button></li>
+							<li className="list-item"><Link to='/' className='nav-item' onClick={collapsePageChange}>About</Link></li>
+							<li className="list-item"><Link to='/' className='nav-item' onClick={collapsePageChange}>Work</Link></li>
+							<li className="list-item"><Link to='/' className='nav-item' onClick={collapsePageChange}>How to start?</Link></li>
+							<li className="list-item"><Link to='/' className='nav-item' onClick={collapsePageChange}>Resources</Link></li>
+							<li className="list-item"><Link to='/' className='nav-item' onClick={collapsePageChange}>Contact</Link></li>
+							<li className="list-item"><button className='button-primary-filled__navbar' onClick={collapsePageChange}>Start a project</button></li>
 						</ul>
 					</div>
 				</nav>
@@ -117,4 +111,11 @@ function closingMenu() {
 	const referenceElement = document.getElementById('navbar--list');
 	referenceElement.classList.remove('navbar--opened');
 	document.body.classList.remove('mobile-menu-open');
+}
+
+function collapsePageChange() {
+	const refElNav = document.getElementById('navbar--list');
+	const refElBod = document.body;
+	refElNav.classList.remove('navbar--opened');
+	refElBod.classList.remove('mobile-menu-open');
 }
