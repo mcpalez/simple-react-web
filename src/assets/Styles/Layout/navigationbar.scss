@@ -16,6 +16,7 @@
 .app-header {
     background: var(--st-main);
     position: fixed;
+    overflow: visible;
     top: 0;
     left: 0;
     width: 100%;
@@ -70,32 +71,44 @@
                         font-size: 14px;
                     }
                 }
-            }
-            .list-dropdown--trigger {
-                font-style: normal;
-                font-weight: 400;
-                font-size: 18px;
-                line-height: 156.02%;
-                letter-spacing: -0.01em;
-                color: var(--st-white);
-                text-decoration: none;
-                &:hover {
-                    color: var(--st-link);
+                .dropdown {
+                    .show:first-child {
+                        &::after {
+                            content: url(../../images/DropdownIconActive.svg);
+                            border: none;
+                            vertical-align: top;
+                            margin-top: -0.16em;
+                        }
+                    }
+                    .dropdown-toggle {
+                        &::after {
+                            content: url(../../images/DropdownIcon.svg);
+                            border: none;
+                            vertical-align: top;
+                            margin-top: -0.16em;
+                        }
+                    }
+                    .dropdown-menu {
+                        transform: translate3d(-18px, 40.5px, -10px) !important;
+                        border: none;
+                        .dropdown-item {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 2vh;
+                            padding: 1.3vh 3vh;
+                            &:hover {
+                                background: unset;
+                            }
+                            a {
+                                font-size: 17px;
+                                color: var(--st-black);
+                                &:hover {
+                                    color: var(--st-link);
+                                }
+                            }
+                        }
+                    }
                 }
-                @include lt-xl {
-                    font-size: 17px;
-                }
-                @include lt-lg {
-                    font-size: 14px;
-                }
-            }
-            .list-dropdown {
-                display: none;
-            }
-            .list-dropdown--opened {
-                display: block;
-                position: absolute;
-                z-index: 999;
             }
             .burger-wrap {
                 border: none;

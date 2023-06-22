@@ -41,19 +41,19 @@ function NavigationBar() {
 					<a href='/'><Logo/></a>
 					<div className='menu'>
 						<div className='list'>
-							<div className='list-dropdown--trigger'>Services</div>
+							{/*<div className='list-dropdown--trigger'>Services</div>
 							<div className='list-dropdown' id='dropdown-list-menu'>
 								<Link className='dropdown-link' to='/services/development-services'>Development services</Link>
 								<Link className='dropdown-link' to='/services/ux-ui-services'>UX and UI services</Link>
 								<Link className='dropdown-link' to='/services'>See all services</Link>
-							</div>	
-							{/* <NavDropdown title="Services" id="basic-nav-dropdown">
+							</div>*/}
+							<NavDropdown title="Services" id="basic-nav-dropdown">
 								<NavDropdown.Item>
 									<Link className='dropdown-link' to='/services/development-services'>Development services</Link>
 									<Link className='dropdown-link' to='/services/ux-ui-services'>UX and UI services</Link>
 									<Link className='dropdown-link' to='/services'>See all services</Link>
 								</NavDropdown.Item>
-							</NavDropdown> */}
+							</NavDropdown>
 							<Link to='/' className='nav-item'>About</Link>
 							<Link to='/' className='nav-item'>Work</Link>
 							<Link to='/' className='nav-item'>How to start?</Link>
