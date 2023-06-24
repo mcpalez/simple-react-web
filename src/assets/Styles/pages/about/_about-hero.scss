@@ -1,0 +1,40 @@
+.hero__about {
+    padding-block: 20vh 12.4vh;
+    background: var(--st-gray-100);
+    @include lt-md {
+        padding-block: 17vh 6vh;
+    }
+    .container {
+        .row {
+            .col-hero__content {
+                display: flex;
+                flex-direction: column;
+                gap: 2vh;
+                p {
+                    color: var(--st-black);
+                }
+                .txt-container {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 3.5vh;
+                    h2 {
+                        @include lt-md {
+                            font-size: 35px;
+                        }
+                    }
+                    p {
+                        color: var(--st-black);
+                    }
+                }
+            }
+            .col-hero__wrapper {
+                img {
+                    height: auto;
+                    max-width: 100%;
+                    border-radius: 13px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

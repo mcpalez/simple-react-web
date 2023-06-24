@@ -47,6 +47,9 @@
                     button {
                         svg {
                             margin-left: 1vh;
+                            path {
+                                stroke: var(--st-main);
+                            }
                         }
                     }
                 }

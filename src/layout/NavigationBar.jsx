@@ -10,6 +10,7 @@ import Home from '../pages/Home';
 import Development from '../pages/Development';
 import Services from '../pages/Services';
 import Uxui from '../pages/Uxui';
+import About from '../pages/About';
 
 function NavigationBar() {
 	const scrollDirection = useScrollDirection();
@@ -48,7 +49,7 @@ function NavigationBar() {
 									<Link className='dropdown-link' to='/services'>See all services</Link>
 								</NavDropdown.Item>
 							</NavDropdown>
-							<Link to='/' className='nav-item'>About</Link>
+							<Link to='/about' className='nav-item'>About</Link>
 							<Link to='/' className='nav-item'>Work</Link>
 							<Link to='/' className='nav-item'>How to start?</Link>
 							<Link to='/' className='nav-item'>Resources</Link>
@@ -78,7 +79,7 @@ function NavigationBar() {
 									<Link className='dropdown-link' to='/services' onClick={collapsePageChange}>See all services</Link>
 								</NavDropdown.Item>
 							</NavDropdown>
-							<li className="list-item"><Link to='/' className='nav-item' onClick={collapsePageChange}>About</Link></li>
+							<li className="list-item"><Link to='/about' className='nav-item' onClick={collapsePageChange}>About</Link></li>
 							<li className="list-item"><Link to='/' className='nav-item' onClick={collapsePageChange}>Work</Link></li>
 							<li className="list-item"><Link to='/' className='nav-item' onClick={collapsePageChange}>How to start?</Link></li>
 							<li className="list-item"><Link to='/' className='nav-item' onClick={collapsePageChange}>Resources</Link></li>
@@ -94,6 +95,7 @@ function NavigationBar() {
 		  	<Route path='services' element={<Services />}/>
 			<Route path='services/development-services' element={<Development />}/>
 			<Route path='services/ux-ui-services' element={<Uxui />}/>
+			<Route path='about' element={<About />}/>
         </Routes>
       </BrowserRouter>
   )

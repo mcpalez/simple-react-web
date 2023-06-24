@@ -11,7 +11,7 @@ function Hero() {
     <section className='hero__home top--spacing'>
         <Container>
             <Row>
-                <Col md={6} className='col-hero__content'>
+                <Col lg={6} className='col-hero__content'>
                     <h1 className='h1-default'>Outstanding digital&nbsp;experience’s</h1>
                     <p className='p-default'>We creates and builds quick web apps, online websites, and mobile applications. Let’s get started and work together!</p>
                     <div className="button-container">
@@ -19,7 +19,7 @@ function Hero() {
                         <ButtonOutlined>Our services</ButtonOutlined>
                     </div>
                 </Col>
-                <Col md={6} className='col-hero__wrapper'>
+                <Col lg={6} className='col-hero__wrapper'>
                     <img src={Frame01} alt="" />
                 </Col>
             </Row>

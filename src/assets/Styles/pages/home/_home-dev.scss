@@ -21,11 +21,13 @@
                 }
             }
             .col-dev__content {
-                order: -1;
                 display: flex;
                 flex-direction: column;
                 gap: 2.4vh;
                 align-items: flex-start;
+                @include lt-md {
+                    order: -1;
+                }
                 p {
                     color: var(--st-black);
                 }
