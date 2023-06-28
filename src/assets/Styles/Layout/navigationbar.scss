@@ -72,14 +72,6 @@
                     }
                 }
                 .dropdown {
-                    .show:first-child {
-                        &::after {
-                            content: url(../../images/DropdownIconActive.svg);
-                            border: none;
-                            vertical-align: top;
-                            margin-top: -0.16em;
-                        }
-                    }
                     .dropdown-toggle {
                         &::after {
                             content: url(../../images/DropdownIcon.svg);
