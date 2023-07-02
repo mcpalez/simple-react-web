@@ -1,0 +1,13 @@
+.values__about {
+    padding-top: 12vh;
+    padding-bottom: 18vh;
+    .container {
+        .row {
+            .values__col-introduction {
+                p {
+                    color: var(--st-black);
+                }
+            }
+        }
+    }
+}
