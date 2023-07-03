@@ -2,10 +2,74 @@
     padding-top: 12vh;
     padding-bottom: 18vh;
     .container {
-        .row {
+        .row-first {
             .values__col-introduction {
+                display: flex;
+                flex-direction: column;
+                gap: 2.4vh;
+                @include lt-md {
+                    padding-bottom: 3vh;
+                }
                 p {
                     color: var(--st-black);
+                }
+            }
+        }
+        .row-second, .row-third {
+            margin-top: 6vh;
+            @include gt-md {
+                --bs-gutter-x: 4vh;
+            }
+            @include lt-md {
+                gap: 2vh;
+                margin-top: 3.5vh;
+            }
+            .values__box {
+                .content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2.4vh;
+                    background: var(--st-light-blue);
+                    padding: 3.2vh;
+                    border-radius: 1.3vh;
+                    @include lt-lg {
+                        min-height: 30vh;
+                    }
+                    @include lt-md {
+                        min-height: unset;
+                        padding-block: 2vh;
+                        padding-inline: 0;
+                        background: none;
+                        border-bottom: 2px solid var(--st-orange);
+                        border-radius: 0;
+                        gap: 2vh;
+                    }
+                    p {
+                        color: var(--st-black);
+                    }
+                    .heading-box {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 1.5vh;
+                        @include lt-md {
+                            flex-direction: row-reverse;
+                            justify-content: flex-end;
+                        }
+                    }
+                }
+            }
+        }
+        .row-third {
+            @include lt-md {
+                margin-top: 2vh;
+            }
+            .values__box:last-child {
+                .content {
+                    background: var(--st-gray-100);
+                    @include lt-md {
+                        border-bottom: 0;
+                    }
                 }
             }
         }

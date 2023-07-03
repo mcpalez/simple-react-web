@@ -3,7 +3,7 @@ import Hero from '../components/pages/services/Hero';
 import WeDo from '../components/pages/services/WeDo';
 import Offer from '../components/pages/services/Offer'
 import Capabilities from '../components/pages/services/Capabilities';
-import PreFooter from '../components/cta/ctaBottom';
+import CtaBottom from '../components/cta/CtaBottom';
 
 
 const Services = () => {
@@ -13,7 +13,7 @@ const Services = () => {
             <WeDo/>
             <Offer/>
             <Capabilities/>
-            <PreFooter/>
+            <CtaBottom/>
         </main>
     )
 }
