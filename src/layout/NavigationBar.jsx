@@ -11,6 +11,7 @@ import Development from '../pages/Development';
 import Services from '../pages/Services';
 import Uxui from '../pages/Uxui';
 import About from '../pages/About';
+import Resources from '../pages/Resources';
 
 function NavigationBar() {
 	const scrollDirection = useScrollDirection();
@@ -52,7 +53,7 @@ function NavigationBar() {
 							<Link to='/about' className='nav-item'>About</Link>
 							<Link to='/' className='nav-item'>Work</Link>
 							<Link to='/' className='nav-item'>How to start?</Link>
-							<Link to='/' className='nav-item'>Resources</Link>
+							<Link to='/resources' className='nav-item'>Resources</Link>
 						</div>
 						<button className='burger-wrap' onClick={openingMenu}>
 							<HamburgerMenuIcon/>
@@ -82,7 +83,7 @@ function NavigationBar() {
 							<li className="list-item"><Link to='/about' className='nav-item' onClick={collapsePageChange}>About</Link></li>
 							<li className="list-item"><Link to='/' className='nav-item' onClick={collapsePageChange}>Work</Link></li>
 							<li className="list-item"><Link to='/' className='nav-item' onClick={collapsePageChange}>How to start?</Link></li>
-							<li className="list-item"><Link to='/' className='nav-item' onClick={collapsePageChange}>Resources</Link></li>
+							<li className="list-item"><Link to='/resources' className='nav-item' onClick={collapsePageChange}>Resources</Link></li>
 							<li className="list-item"><Link to='/' className='nav-item' onClick={collapsePageChange}>Contact</Link></li>
 							<li className="list-item"><button className='button-primary-filled__navbar' onClick={collapsePageChange}>Start a project</button></li>
 						</ul>
@@ -96,6 +97,7 @@ function NavigationBar() {
 			<Route path='services/development-services' element={<Development />}/>
 			<Route path='services/ux-ui-services' element={<Uxui />}/>
 			<Route path='about' element={<About />}/>
+			<Route path='resources' element={<Resources />}/>
         </Routes>
       </BrowserRouter>
   )

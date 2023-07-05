@@ -1,0 +1,41 @@
+.postbox__resources {
+    padding-block: 9.5vh 16vh;
+    .container {
+        .row {
+            --bs-gutter-y: 3vh;
+            .post_col {
+                .post-wrapper {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 2.2vh;
+                    @include lt-lg {
+                        flex-direction: column;
+                    }
+                    img {
+                        height: auto;
+                        max-width: 100%;
+                        border-radius: 13px;
+                        width: 100%;
+                    }
+                    .post-txt {
+                        display: flex;
+                        gap: 1.7vh;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        h5 {
+                            font-size: 20px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 137.5%;
+                            letter-spacing: -0.2px;
+                        }
+                        p {
+                            color: var(--st-black);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
