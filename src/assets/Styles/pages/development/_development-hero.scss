@@ -9,6 +9,7 @@
                 flex-flow: wrap;
                 gap: 3.5vh;
                 margin-bottom: 2.5vh;
+                z-index: 1;
                 @include lt-md {
                     gap: 2vh;
                 }
@@ -21,6 +22,7 @@
             }
             .col-hero__wrapper {
                 text-align: right;
+                z-index: 1;
                 img {
                     height: auto;
                     max-width: 100%;
@@ -28,6 +30,31 @@
                     width: 100%;
                     @include gt-md {
                         max-width: 610px;
+                    }
+                }
+            }
+            .shape-item {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                top: 0;
+                z-index: 0;
+                overflow: hidden;
+                pointer-events: none;
+                display: flex;
+                .shape-wrapper {
+                    margin: 0 0 auto auto;
+                    transform: translate(5%, 19%) rotate(0deg);
+                    max-width: 1100px;
+                    svg {
+                        height: auto;
+                        width: 100%;
+                        g {
+                            path {
+                                stroke: var(--st-blue);
+                            }
+                        }
                     }
                 }
             }

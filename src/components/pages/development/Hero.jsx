@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import ButtonFilled from '../../buttons/button-filled';
 import hero_development from '../../../assets/images/development/hero_development.jpg';
 import hero_development_mobile from '../../../assets/images/development/hero_development_mobile.jpg';
+import {ReactComponent as ShapeItem04} from '../../../assets/images/ShapeItem04.svg';
 
 const Hero = () => {
   return (
@@ -20,6 +21,11 @@ const Hero = () => {
 					<img alt='' src={hero_development} className='mobile--hidden'></img>
 					<img alt='' src={hero_development_mobile} className='desktop--hidden'></img>
 				</Col>
+				<div className="shape-item mobile--hidden">
+					<div className="shape-wrapper">
+						<ShapeItem04/>
+					</div>
+				</div>
 			</Row>
         </Container>
     </section>

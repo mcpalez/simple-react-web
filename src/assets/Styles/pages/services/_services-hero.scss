@@ -3,6 +3,9 @@
     .container {
         .row-hero__hero {
             align-items: center;
+            @include lt-md {
+                --bs-gutter-y: 2vh;
+            }
             .col-hero__content {
                 p {
                     max-width: 600px;

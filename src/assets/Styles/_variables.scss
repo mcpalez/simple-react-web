@@ -6,7 +6,8 @@ body {
 }
 
 //Colors
-    $--st-main: #1B2934;
+    //$--st-main: #1B2934;
+    $--st-main: #0e3c2f;
     $--st-black: #020202;
     $--st-white: #FFFFFF;
     $--st-gray-100: #FBFBFC;
@@ -31,8 +32,8 @@ body {
     $--st-orange: #FF7752;
     $--st-ember: #FF3C00;
     $--st-green: #19BE84;
-    $--st-green-100: #0FD354;
-    $--st-green-dark: #11af49;
+    $--st-green-100: #8cec80;
+    $--st-green-dark: #6ab161;
     
 :root {
     --st-main: #{$--st-main};
@@ -78,7 +79,7 @@ body {
     }
 }
 
-@media (min-width: 1400px) { //setting up container width, manually without editing bootstrap.scss
+@media (min-width: 1400px) { //setting up container width, override bootstrap.scss
     .container {
         max-width: 1450px !important;
     }
@@ -106,7 +107,7 @@ a {
 }
 
 p, .p-default {
-    margin: 0 !important;
+    margin-bottom: 0 !important;
     font-weight: 300;
     font-size: 19px;
     line-height: 163%;

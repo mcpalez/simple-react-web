@@ -12,7 +12,7 @@ const Hero = () => {
             <Row className='row-hero__hero'>
                 <Col md={6} className='col-hero__content'>
                     <h1 className='h1-default'>We shape your<br/> products and services</h1>
-                    <p className='p-default'>Slingit is an agency that designs and develops fast e-commerce, marketing websites, web applications, and mobile apps.</p>
+                    <p className='p-default'>Terry is an agency that designs and develops fast e-commerce, marketing websites, web applications, and mobile apps.</p>
                 </Col>
                 <Col md={6} className='col-hero__wrapper'>
                     <img alt='' src={hero_services} className='mobile--hidden'></img>

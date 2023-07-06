@@ -86,7 +86,7 @@ function Footer() {
                             <p>Want to know more about<br></br>
                             our business? <em className='underlined-text'><a href='/'>Write to us.</a></em>
                             </p>
-                            <p>Copyright &#169;2022 — 2023 Slingit.</p>
+                            <p>Copyright &#169;2022 — 2023 Terry.</p>
                             <p>Follow us</p>
                             <div className="social-footer__container">
                                 <MessengerIcon/>
