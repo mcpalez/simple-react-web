@@ -1,0 +1,54 @@
+.hero__projectstart {
+    @include lt-sm {
+        background: var(--st-gray-150);
+    }
+    .container {
+        .row {
+            .col-hero__content {
+                display: flex;
+                flex-direction: column;
+                gap: 2vh;
+                @include lt-md {
+                    padding-bottom: 6vh;
+                }
+                p {
+                    color: var(--st-black);
+                }
+                .txt-container {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 3.5vh;
+                    @include lt-md {
+                        gap: 2vh;
+                    }
+                    .headings-box {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1.5vh;
+                        @include lt-md {
+                            gap: 2vh;
+                        }
+                        h2 {
+                            max-width: 410px;
+                            @include lt-md {
+                                font-size: 35px;
+                            }
+                        }
+                        h3 {
+                            color: var(--st-gray-dark);
+                        }
+                    }
+                    p {
+                        color: var(--st-black);
+                        max-width: 550px;
+                    }
+                }
+            }
+            .col-hero__form {
+                @include lt-md {
+                    padding-top: 5vh;
+                }
+            }
+        }
+    }
+}

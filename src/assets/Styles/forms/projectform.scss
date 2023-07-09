@@ -3,6 +3,10 @@
         background: var(--st-gray-150);
         padding: 4.5vh;
         border-radius: 1.3vh;
+        @include lt-md {
+            padding: 0;
+            background: transparent;
+        }
         form {
             display: flex;
             flex-direction: column;
@@ -23,6 +27,13 @@
                             font-weight: 400;
                             line-height: 163%;
                             letter-spacing: -0.17px;
+                            &:valid {
+                                border: var(--st-green-dark) 1.5px solid;
+                            }
+                            &:focus {
+                                box-shadow: none;
+                                border: var(--st-green-100) 1.5px solid;
+                            }
                             &::placeholder {
                                 color: var(--st-gray-400);
                             }
@@ -36,6 +47,11 @@
                             font-weight: 400;
                             line-height: 163%;
                             letter-spacing: -0.17px;
+                            color: var(--st-gray-500);
+                            &:focus {
+                                box-shadow: none;
+                                border: var(--st-green-100) 1.5px solid;
+                            }
                             option {
                                 color: var(--st-black);
                             }
@@ -52,6 +68,9 @@
                     .contact-message-field {
                         input {
                             min-height: 90px;
+                            &:focus {
+                                box-shadow: none;
+                            }
                             &::placeholder {
                                 position: absolute;
                                 top: 0;
@@ -74,12 +93,19 @@
     .policy-note {
         padding-block: 2.5vh;
         padding-inline: 4.5vh;
+        @include lt-md {
+            padding-block: 2vh;
+            padding-inline: 0;
+        }
         p {
             margin: auto;
             max-width: 420px;
             text-align: center;
             font-size: 13px;
             color: var(--st-gray-500);
+            @include lt-md {
+                text-align: left;
+            }
         }
     }
 }
