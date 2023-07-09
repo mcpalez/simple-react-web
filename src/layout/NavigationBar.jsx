@@ -12,6 +12,7 @@ import Services from '../pages/Services';
 import Uxui from '../pages/Uxui';
 import About from '../pages/About';
 import Resources from '../pages/Resources';
+import ProjectStart from '../pages/ProjectStart';
 
 function NavigationBar() {
 	const scrollDirection = useScrollDirection();
@@ -61,7 +62,7 @@ function NavigationBar() {
 					</div>
 					<div className="list-side">
 						<Link to='/' className='nav-item'>Contact us</Link>
-						<button className='button-primary-filled__navbar'>Start a project</button>
+						<Link to='/project-start' className='nav-item'><button className='button-primary-filled__navbar'>Start a project</button></Link>
 					</div>
 				</nav>
 				<nav className='navigation navbar--wrapper' id='navbar--list'>
@@ -98,6 +99,7 @@ function NavigationBar() {
 			<Route path='services/ux-ui-services' element={<Uxui />}/>
 			<Route path='about' element={<About />}/>
 			<Route path='resources' element={<Resources />}/>
+			<Route path='project-start' element={<ProjectStart />}/>
         </Routes>
       </BrowserRouter>
   )

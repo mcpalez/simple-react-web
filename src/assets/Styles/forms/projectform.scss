@@ -1,0 +1,85 @@
+.project--form-container {
+    .project-form {
+        background: var(--st-gray-150);
+        padding: 4.5vh;
+        border-radius: 1.3vh;
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 3vh;
+            .row {
+                .project--form-col {
+                    .contact-field {
+                        label {
+                            font-size: 17px;
+                            color: var(--st-gray-500);
+                        }
+                        input {
+                            padding: 1vh 1.5vh;
+                            border-radius: 1.2vh;
+                            border: var(--st-gray-200) 1.5px solid;
+                            font-size: 17px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 163%;
+                            letter-spacing: -0.17px;
+                            &::placeholder {
+                                color: var(--st-gray-400);
+                            }
+                        }
+                        select {
+                            padding: 1vh 1.5vh;
+                            border-radius: 1.2vh;
+                            border: var(--st-gray-200) 1.5px solid;
+                            font-size: 17px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 163%;
+                            letter-spacing: -0.17px;
+                            option {
+                                color: var(--st-black);
+                            }
+                            .budget_placeholder {
+                                color: var(--st-gray-400);
+                                font-size: 17px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 163%;
+                                letter-spacing: -0.17px;
+                            }
+                        }
+                    }
+                    .contact-message-field {
+                        input {
+                            min-height: 90px;
+                            &::placeholder {
+                                position: absolute;
+                                top: 0;
+                                padding-top: 1vh;
+                            }
+                        }
+                    }
+                }
+                .project--button-col {
+                    display: flex;
+                    flex-direction: column;
+                    button {
+                        background: var(--st-main);
+                        color: var(--st-white);
+                    }
+                }
+            }
+        }
+    }
+    .policy-note {
+        padding-block: 2.5vh;
+        padding-inline: 4.5vh;
+        p {
+            margin: auto;
+            max-width: 420px;
+            text-align: center;
+            font-size: 13px;
+            color: var(--st-gray-500);
+        }
+    }
+}
