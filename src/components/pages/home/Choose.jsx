@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 
-import Frame46 from '../../../assets/images/home/Frame46.jpg';
+import Frame_Choose from '../../../assets/images/home/Frame_Choose.jpeg';
 
 import ButtonOutlined from '../../buttons/button-outlined';
 import PlayButtonVideo from '../../buttons/PlayButtonVideo';
@@ -22,7 +22,7 @@ function Choose() {
                 </Col>
                 <Col md={12} lg={6} className='col-choose__img-wrapper'>
                     <PlayButtonVideo/>
-                    <img src={Frame46} alt=''></img>
+                    <img src={Frame_Choose} alt=''></img>
                 </Col>
             </Row>
         </Container>

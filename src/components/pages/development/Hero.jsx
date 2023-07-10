@@ -21,11 +21,11 @@ const Hero = () => {
 					<img alt='' src={hero_development} className='mobile--hidden'></img>
 					<img alt='' src={hero_development_mobile} className='desktop--hidden'></img>
 				</Col>
-				<div className="shape-item mobile--hidden">
+				{/* <div className="shape-item mobile--hidden">
 					<div className="shape-wrapper">
 						<ShapeItem04/>
 					</div>
-				</div>
+				</div> */}
 			</Row>
         </Container>
     </section>

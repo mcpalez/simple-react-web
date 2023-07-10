@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 
-import Frame958 from '../../../assets/images/home/Frame958.jpeg';
+import Frame_Code from '../../../assets/images/home/Frame_Code.jpeg';
 
 import ButtonOutlined from '../../buttons/button-outlined';
 
@@ -13,7 +13,7 @@ function Development() {
         <Container>
             <Row>
                 <Col lg={6} className='col-dev__img-wrapper'>
-					<img src={Frame958} alt="" />
+					<img src={Frame_Code} alt="" />
                 </Col>
                 <Col lg={6} className='col-dev__content'>
 					<h2 className='h2-default'>Precise & pixel perfect</h2>

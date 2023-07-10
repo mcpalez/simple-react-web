@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import ButtonFilled from '../../buttons/button-filled';
 import ButtonOutlined from '../../buttons/button-outlined';
-import Frame01 from '../../../assets/images/home/Frame01.jpg'
+import Frame_Hero from '../../../assets/images/home/Frame_Hero.jpg'
 
 function Hero() {
   return (
@@ -20,7 +20,7 @@ function Hero() {
                     </div>
                 </Col>
                 <Col lg={6} className='col-hero__wrapper'>
-                    <img src={Frame01} alt="" />
+                    <img src={Frame_Hero} alt="" />
                 </Col>
             </Row>
         </Container>

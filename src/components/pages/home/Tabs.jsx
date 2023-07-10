@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Tab from 'react-bootstrap/Tab';
 import Nav from 'react-bootstrap/Nav';
-import Frame956 from '../../../assets/images/home/Frame956.jpeg';
+import Frame_Tab_1 from '../../../assets/images/home/Frame_Tab_1.jpeg';
 import { ReactComponent as Frame938 } from '../../../assets/images/home/Frame938.svg';
 import { ReactComponent as Frame939 } from '../../../assets/images/home/Frame939.svg';
 import { ReactComponent as Frame940 } from '../../../assets/images/home/Frame940.svg';
@@ -26,10 +26,10 @@ function Tabs() {
                     <Row>
                         <Col lg={8} md={12} sm={12} className='tab__panel'>
                             <Tab.Content>
-                                <Tab.Pane eventKey="first"><img src={Frame956} alt="" /></Tab.Pane>
-                                <Tab.Pane eventKey="second"><img src={Frame956} alt="" /></Tab.Pane>
-                                <Tab.Pane eventKey="third"><img src={Frame956} alt="" /></Tab.Pane>
-                                <Tab.Pane eventKey="fourth"><img src={Frame956} alt="" /></Tab.Pane>
+                                <Tab.Pane eventKey="first"><img src={Frame_Tab_1} alt="" /></Tab.Pane>
+                                <Tab.Pane eventKey="second"><img src={Frame_Tab_1} alt="" /></Tab.Pane>
+                                <Tab.Pane eventKey="third"><img src={Frame_Tab_1} alt="" /></Tab.Pane>
+                                <Tab.Pane eventKey="fourth"><img src={Frame_Tab_1} alt="" /></Tab.Pane>
                             </Tab.Content>
                         </Col>
                         <Col lg={4} md={12} sm={12} className='tab__indicator'>
