@@ -32,7 +32,7 @@
                             }
                             &:focus {
                                 box-shadow: none;
-                                border: var(--st-green-100) 1.5px solid;
+                                border: var(--st-blue-100) 1.5px solid;
                             }
                             &::placeholder {
                                 color: var(--st-gray-400);
@@ -48,9 +48,12 @@
                             line-height: 163%;
                             letter-spacing: -0.17px;
                             color: var(--st-gray-500);
+                            // &:valid {
+                            //     border: var(--st-green-dark) 1.5px solid;
+                            // }
                             &:focus {
                                 box-shadow: none;
-                                border: var(--st-green-100) 1.5px solid;
+                                border: var(--st-blue-100) 1.5px solid;
                             }
                             option {
                                 color: var(--st-black);

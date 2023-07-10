@@ -50,7 +50,7 @@ function ProjectForm() {
                     <Col className='project--form-col' md={12}>
                         <Form.Group className="contact-field" controlId="formBasicEmail" hasValidation>
                             <Form.Label>Company name *</Form.Label>
-                            <Form.Control minlength="3" type="text" name='project_company' placeholder='e.g. Example Company' required/>
+                            <Form.Control minlength="3" type="text" name='project_company' placeholder='e.g. Company .Inc' required/>
                         </Form.Group>
                     </Col>
                 </Row>

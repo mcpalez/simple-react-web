@@ -51,12 +51,12 @@
                     .swiper-pagination-progressbar {
                         background: var(--st-gray-100);
                         min-height: 1.1vh;
-                        border-radius: 0.5vh;
+                        border-radius: 0.55vh;
                         @include lt-md {
                             min-height: 1.5vh;
                         }
                         span {
-                            border-radius: 0.9vh;
+                            border-radius: 0.55vh;
                             background: var(--st-indigo);
                         }
                     }

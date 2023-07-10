@@ -62,7 +62,7 @@ function NavigationBar() {
 					</div>
 					<div className="list-side">
 						<Link to='/' className='nav-item'>Contact us</Link>
-						<Link to='/project-start' className='nav-item'><button className='button-primary-filled__navbar'>Start a project</button></Link>
+						<Link to='/start-project' className='nav-item'><button className='button-primary-filled__navbar'>Start a project</button></Link>
 					</div>
 				</nav>
 				<nav className='navigation navbar--wrapper' id='navbar--list'>
@@ -86,7 +86,11 @@ function NavigationBar() {
 							<li className="list-item"><Link to='/' className='nav-item' onClick={collapsePageChange}>How to start?</Link></li>
 							<li className="list-item"><Link to='/resources' className='nav-item' onClick={collapsePageChange}>Resources</Link></li>
 							<li className="list-item"><Link to='/' className='nav-item' onClick={collapsePageChange}>Contact</Link></li>
-							<li className="list-item"><button className='button-primary-filled__navbar' onClick={collapsePageChange}>Start a project</button></li>
+							<li className="list-item">
+								<Link to='/start-project' className='nav-item' onClick={collapsePageChange}>
+									<button className='button-primary-filled__navbar' onClick={collapsePageChange}>Start a project</button>
+								</Link>
+							</li>
 						</ul>
 					</div>
 				</nav>
@@ -99,7 +103,7 @@ function NavigationBar() {
 			<Route path='services/ux-ui-services' element={<Uxui />}/>
 			<Route path='about' element={<About />}/>
 			<Route path='resources' element={<Resources />}/>
-			<Route path='project-start' element={<ProjectStart />}/>
+			<Route path='start-project' element={<ProjectStart />}/>
         </Routes>
       </BrowserRouter>
   )

@@ -7,7 +7,7 @@ body {
 
 //Colors
     //$--st-main: #1B2934;
-    $--st-main: #0c0c0c;
+    $--st-main: #1C2046;
     $--st-black: #020202;
     $--st-white: #FFFFFF;
     $--st-gray-100: #FBFBFC;
@@ -73,7 +73,7 @@ body {
 //Container presets
 .top--spacing {
     padding-top: 170px;
-    padding-bottom: 100px;
+    padding-bottom: 15vh;
 }
 
 @include lt-md {
